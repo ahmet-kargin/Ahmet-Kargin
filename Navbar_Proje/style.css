@@ -1,0 +1,198 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI';
+    font-size:14px;
+    line-height: 1;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.box{
+    display: flex;
+    align-items: flex-end;
+    width: 20%;
+    height: 100%;
+    padding: 0 30px;
+}
+#search{
+    width: 50px;
+    height: 50px;
+    transition: width 0.5s;
+}
+
+#search:focus{
+    width: 100%;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: darkseagreen;
+    
+}
+header{
+    margin: 50x;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    /* background-color: aqua; */
+    padding: 10px 30px;
+    /* opacity: 0.5; */
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px;
+    width: 90%;
+    border-radius: 10px;
+    width: 90%;
+}
+#logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    border: 2px solid red;
+    border-radius: 5px;
+    width: 25%;
+    height: 100px;
+    color: blue;
+}
+#logo h1{
+    font-size:35px;
+    color:rgb(255, 255, 255)
+    
+}
+nav{
+    width: 50%;
+}
+
+#menu ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+#menu ul li{
+    display:flex;
+    background:darkgreen;
+    padding:5px 10px;
+    border-radius: 2px;
+    width: 100px;
+    text-align: center;
+    color:black;
+    transition: 100ms ease-in-out;
+}
+
+#menu ul li a{
+    text-decoration: none;
+    color:rgb(1, 27, 21);
+    font-weight: bolder;
+    font-size: 18px !important;
+}
+#menu ul li:hover{
+    background: linear-gradient(to bottom right, rgb(3, 141, 76),rgb(1, 27, 21)); 
+    transform: translate(0px,2px);
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dropbtn {
+    background-color: darkgreen;
+    color: black;
+    padding:15px;
+    font-size: 16px;
+    font-weight: bolder;
+    width: 100px;
+    text-align: center;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    font-weight: bolder;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;   
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background: linear-gradient(to bottom right, rgb(3, 141, 76),rgb(1, 27, 21)); 
+    transform: translate(0px,2px);
+
+}
+
+#slider-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    width: 100%;
+}
+#slider{
+    display: flex;
+    width: 600px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+#control{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    height: 650px;
+    width: 600px;
+}
+
+#control a{
+    text-decoration: none;
+    color: white;
+    background-color: cadetblue;
+    padding:0px 10px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+    opacity: 0.6;
+}
+

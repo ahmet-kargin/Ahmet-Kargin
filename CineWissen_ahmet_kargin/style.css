@@ -1,0 +1,84 @@
+#control{
+    display: flex;
+    justify-content: center;
+    text-align: end;
+    position: absolute;
+    bottom:5px;
+    right: 5px;
+    height: 50px;
+    width: 220px;
+}
+#control a{
+    text-decoration: none;
+    background-color: pink;
+    color: blue;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    margin-right: 4px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.carousel-inner{
+    position: relative; 
+    padding: 50px;
+    height: 500px;
+    width: 100%;
+}
+
+footer{
+    background-color: red;
+    color: white;
+}
+.navbar-brand{
+    background-color: chartreuse;
+    font-weight: bolder;
+    font-size: larger;
+    padding: 20px;
+    color: blue;
+}
+.cardAll{
+    margin-top: 20px;
+    display: flex ;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+}
+
+.filmdetail{
+    
+    margin-bottom: 50px;
+    display: flex;
+    color:black;
+    font-size: larger;
+    flex-direction: column;
+    width: 100%;
+    border: 3px solid black;
+    text-align: center;
+    
+}
+.kunyeAfis{
+margin-top: 10px;
+height: 300px;
+justify-content: space-around;
+display: flex;
+flex-direction: row;
+height: auto;
+color: black;
+}
+.kunye{
+    display: flex;
+    flex-direction: row;
+    text-align:center;
+    width: 50%;
+    height: 300px;
+    border: 2px solid black;
+
+}
+.afis{
+    width: 50%;
+    height: 300px;
+    text-align: center;
+    border: 3px solid black;
+}
