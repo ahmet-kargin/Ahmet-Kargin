@@ -25,6 +25,7 @@ body{
 
 #search:focus{
     width: 100%;
+    border: 3px solid black;
 }
 #container{
     display: flex;
@@ -89,6 +90,7 @@ nav{
     text-align: center;
     color:black;
     transition: 100ms ease-in-out;
+    list-style: none;
 }
 
 #menu ul li a{
@@ -96,6 +98,8 @@ nav{
     color:rgb(1, 27, 21);
     font-weight: bolder;
     font-size: 18px !important;
+    letter-spacing: 2px;
+    transition: 0.5s;
 }
 #menu ul li:hover{
     background: linear-gradient(to bottom right, rgb(3, 141, 76),rgb(1, 27, 21)); 
@@ -196,3 +200,26 @@ section{
     opacity: 0.6;
 }
 
+.card{
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    font-weight: bolder;
+    background-color: blue;
+    margin-top: 300px;
+    margin-left: 20px;
+}
+#projeAdi{
+    background-color: crimson;
+    height: 50px;
+    font-size: 50px;
+    font-weight: bolder;
+}
+.content{
+    padding: 50px;
+    background-color: chartreuse;
+}
