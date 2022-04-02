@@ -47,16 +47,20 @@ nav{
     display: inline-block;
     text-align: center;
     text-decoration: none;
-    padding: 11px;
+    padding: 10px 12px;
     color:rgb(1, 27, 21);
     font-weight: bolder;
     font-size: 12px !important;
     transition: 0.4s;
     color: white;
     height: auto;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
-.btn:hover{
-    background: black; 
+.btn:hover, .active{
+    background: red; 
+    color: white;
     transform: translate(0px,2px);
 }
 #logo{
