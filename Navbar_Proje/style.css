@@ -32,29 +32,28 @@ body{
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100px;
-    background-color: darkseagreen;
-    
+    height: 100%;
 }
 header{
-    margin: 50x;
+    margin: 20x;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     width: 100%;
-    height: 100%;
-    /* background-color: aqua; */
+    height: 100px;
+    background-color: aqua;
     padding: 10px 30px;
     /* opacity: 0.5; */
 }
 section{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top:20px;
+    margin-top:200px;
     width: 90%;
     border-radius: 10px;
-    width: 90%;
+    justify-content: space-around;
 }
 #logo{
     display: flex;
@@ -105,11 +104,7 @@ nav{
     background: linear-gradient(to bottom right, rgb(3, 141, 76),rgb(1, 27, 21)); 
     transform: translate(0px,2px);
 }
-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .dropbtn {
     background-color: darkgreen;
     color: black;
@@ -159,7 +154,7 @@ section{
 }
 
 #slider-container{
-    margin-top: 50px;
+    margin:50px;
     display: flex;
     justify-content: center;
     height: 300px;
@@ -201,25 +196,126 @@ section{
 }
 
 .card{
-    height: 500px;
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 200px 200px 100px;
+    grid-template-areas: "image" "text" "stats";
+
+    width: 350px;
+    position: relative;
+    margin-top: 30px;
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 18px ;
+    background:white;
+    box-shadow: 5px 5px rgba(0,0,0,0.9);
+    text-align: center;
+}
+.card-image{
+    grid-area:image;
+    background:url("https://i.stack.imgur.com/NEuip.jpg");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-text{
+    grid-area: text;
+    margin: 25px;
+}
+.card-text .date{
+   color: crimson;
+    font-size: 13px;
+}
+.card-text p{
+    color: grey;
+    font-size: 15px;
+}
+.card-text h2{
+    margin-top: 0px;
+
+}
+.card-stats{
+    grid-area: stats;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background: purple;
+}
+.card-stats .stat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    color: white;
+}
+.card-text .type{
+    font-size: 11px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.card-text .value{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+
+.main-popup{
+    background-color: black;
+    position: fixed;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    
+    display: none;
+
+}
+
+.popup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 500px;
+    height: 400px;  
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    margin-top: 150px;
+    position: relative;
+    border-radius: 15px;
+    border: 3px solid red;
+}
+.close-popup{
+    border-radius: 5px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    color: white;
+    position: absolute;
+    top:8px;
+    right: 8px;
+    background-color: brown;
+    
+}
+
+.content-popup{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
-    text-align: center;
-    font-weight: bolder;
-    background-color: blue;
-    margin-top: 300px;
-    margin-left: 20px;
+    align-items: center;
 }
-#projeAdi{
-    background-color: crimson;
-    height: 50px;
-    font-size: 50px;
-    font-weight: bolder;
+
+.popup a{
+    text-decoration: none;
+    background-color: brown;
+    color:white;
+    padding: 5px 10px;
+    font-size:24px;
 }
-.content{
-    padding: 50px;
-    background-color: chartreuse;
-}
+
+

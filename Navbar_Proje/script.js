@@ -31,3 +31,19 @@ function slideShow(slideNumber){
 }
 
 slideShow(slideNo);
+
+
+const tikla = document.querySelector("section");
+const mainPopup = document.querySelector(".main-popup");
+const close = document.querySelector(".close-popup");
+
+tikla.addEventListener("click",()=>{
+    mainPopup.style.display="block";
+})
+
+
+mainPopup.addEventListener("click", e =>{
+    if(e.target.className=="main-popup" || e.target.className=="close-popup"){
+        mainPopup.style.display="none";
+    }
+})
