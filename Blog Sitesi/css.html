@@ -49,7 +49,25 @@
 
 
     </main>
+    <script>
+        $(document).ready(function () {
+            $('.btn').click(function () {
+                var active = $(this).hasClass('active');
+                //make all inactive-doesn't work
+                $('.btn').each(function () {
+                    if ($(this).hasClass('active')) {
+                        $(this).removeClass('active')
+                    }
+                });
 
+                if (active) {
+                    $(this).removeClass('active')
+                } else {
+                    $(this).addClass('active')
+                }
+            });
+        });
+    </script>
 
     <script src="script.js"></script>
 </body>
