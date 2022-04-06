@@ -16,14 +16,14 @@
         <nav>
             <div id="menu">
                 <ul>
-                    <li><a href="#" class="btn">ANA SAYFA</a></li>
-                    <li><a href="index.html#1" class="btn">HTML</a></li>
-                    <li><a href="#2" class="btn">CSS</a></li>
-                    <li><a href="index.html#3" class="btn">BOOTSTARP</a></li>
-                    <li><a href="index.html#4" class="btn">JAVASCRİPT</a></li>
-                    <li><a href="index.html#5" class="btn">JQUERY</a></li>
-                    <li><a href="#" class="btn">HAKKIMDA</a></li>
-                    <li><a href="#" class="btn">İLETİŞİM</a></li>
+                    <li><a href="index.html #anasayfa" class="btn">ANA SAYFA</a></li>
+                    <li><a href="index.html #html" class="btn">HTML</a></li>
+                    <li><a href="#css" class="btn">CSS</a></li>
+                    <li><a href="index.html #bootstrap" class="btn">BOOTSTARP</a></li>
+                    <li><a href="index.html #javascript" class="btn">JAVASCRİPT</a></li>
+                    <li><a href="index.html #jquery" class="btn">JQUERY</a></li>
+                    <li><a href="index.html #hakkimda" class="btn">HAKKIMDA</a></li>
+                    <li><a href="index.html #iletisim" class="btn">İLETİŞİM</a></li>
                 </ul>
             </div>
         </nav> 
@@ -33,7 +33,7 @@
         <div class="lessons">
             <div class="lesson">
                 
-                <div class="lesson-title" id="2">
+                <div class="lesson-title" id="css">
                     <h5>CSS</h5>
                 </div>
                 <div class="lesson-text">
@@ -52,13 +52,14 @@
     <script>
         $(document).ready(function () {
             $('.btn').click(function () {
-                var active = $(this).hasClass('active');
                 //make all inactive-doesn't work
                 $('.btn').each(function () {
                     if ($(this).hasClass('active')) {
+
                         $(this).removeClass('active')
                     }
                 });
+                var active = $(this).hasClass('active');
 
                 if (active) {
                     $(this).removeClass('active')
