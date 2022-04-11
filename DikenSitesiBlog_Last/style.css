@@ -5,22 +5,21 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .menu{
-    margin: 30px 50px 50px 50px ;
-    width: 1400px;
+    margin: 0px 50px 50px 0px ;
+    width: 1260px;
     align-items: center;
     
 }
 .topMenu, .downMenu{
     margin-bottom: -15px;
-    width: 1400px;
+    width: 1140px;
 }
 .topMenu ul, .downMenu ul {
     display: flex;
     flex-direction: row;
     justify-content:space-evenly;
     list-style-type: none;
-    border: 1px solid black;
-    width: 1400px;
+    width: 1260px;
 }
 .topMenu #ustMenu, .downMenu #altMenu{
     text-decoration: none;
@@ -31,18 +30,29 @@
     width: 50px;
     height: 50px;
 }
-.topMenu ul li, .downMenu ul li{
+.topMenu ul li{
     text-align: center;
     margin: 0;
     width: 200px;
     height: 50px;
-    border-left: 1px solid gray;
     border-right: 1px solid gray;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
 }
-.topMenu ul li:hover, .downMenu ul li:hover{
+.downMenu ul li{
+    text-align: center;
+    margin: 0;
+    width: 200px;
+    height: 50px;
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+.topMenu ul  li :hover, .downMenu ul li :hover{
     background-color: black;
-    border-left: 1px solid white;
-    border-right: 1px solid white;
+    border-left: 1px solid gray;
+    color: white;
+
 }
 .topMenu #ustMenu:hover , .downMenu #altMenu:hover{
     color: white;
@@ -51,20 +61,19 @@
 #slide-content{
     /* position: relative; */
     /* justify-content: center !important; */
-    margin-top: 15px;
-    margin-left: 50px;
-    width: 800px;
+    margin-top: 0px;
+    width: 700px;
     height: 300px;
 }
 
 #card-content{
-    margin-left: 50px;
     margin-right: 555px;
-    margin-top:200px;
+    width: 700px;
+    margin-top:100px;
     font-size: large;
 }
 #card-content img{
-    width:370px ;
+    width:300px ;
 }
 
 #card-content a:hover, #side-line-content a:hover{
@@ -82,34 +91,34 @@
     text-decoration: none;
 }
 #surdurulebilirlik{
-    margin-left: 50px;
     margin-right: 555px;
     margin-top: 30px;
 }
 #surdurulebilirlik-header{
     background-color: gray;
+    width: 700px;
     text-align: center;
     opacity: 0.8;
 }
 #surdurulebilirlik-card, #dikeneTakilanlar-card{
     height: 250px;
-    width: 800px;
+    width: 700px;
 }
 #surdurulebilirlik-card img, #dikeneTakilanlar-card img{
-    height: 200px;
+    height: 230px;
 }
 #dikeneTakilanlar-header{
     background-color: gray;
+    width: 700px;
     text-align: center;
     opacity: 0.8;
 }
 
 #topFooter{
-    width: 1400px;
+    width: 1260px;
     height: 300px;
     font-size: 16px;
     margin-top: 15px;
-    margin-left: 50px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -131,12 +140,15 @@
     color: rgb(255, 196, 0);
 
 }
+#dikeneTakilanlar-card h5:hover, #surdurulebilirlik-card h5:hover{
+    color: rgb(255, 196, 0);
+
+}
 #downFooter{
-    width: 1400px;
+    width: 1260px;
     font-size: 14px;
     margin-top: 0px;
-    margin-left: 50px;
-    height: 100px;
+    height: 150px;
     background-color: black;
     color: white;
     text-align: center;
@@ -153,18 +165,21 @@
     margin: 10px;
 }
 
-
+#righ-side{
+    width: 480px;
+}
 #right-side img{
-    width:410px ;
+    width:450px ;
 
 }
 #righ-side-baslik{
-    width: 430px;
+    width: 490px;
 }
 #side-line-content{
-    margin-left: 50px;
-    margin-right: 555px;
+    margin-left: 30px;
+    margin-right: 750px;
     font-size: large;
+    width: 490px;
 }
 section a{
     color: black;
@@ -176,21 +191,39 @@ section{
 
 #side-line-content{
     justify-content: left;
-    margin-left: -400px;
+    margin-left: 30px;
 }
-#side-line-content{
-    width: 410px;
+#side-line-content h5:hover{
+    color: rgb(255, 196, 0);
+
 }
+    
+
 #left-side{
     justify-content: space-around;
     margin-left: 10px;
+    width: 700px;
     color: black;
+    border: 1px solid gray;
 }
 #left-side p{
     color: black;
 }
 #gununOnbiri .card-title{
     background-color: gray;
-    width: 410px;
+    width: 450px;
     text-align: center;
 }
+
+#container{
+    margin: 30px 50px 50px 50px ;
+    justify-content: center;
+    width: 1260px;
+    height: 100%;
+    background-color: white;
+}
+body{
+    background-color: #f5f6fa;
+    
+}
+
