@@ -10,71 +10,41 @@
     align-items: center;
     
 }
-.menu ul{
-    display: flex;
-    justify-content: space-evenly;
+.topMenu, .downMenu{
+    margin-bottom: -15px;
     width: 1400px;
-    text-decoration: none;
-    list-style-type: none;
-    font-size: 16px;
-    font-weight: bold;
-    color: black;
-
 }
-.menu ul li{
-    text-align: left;
-    align-items: center;
-}
-.topMenu #topmenu-kutu{
-    border-right: 1px solid black;
-    width: 60px;
-}
-
-.menu .topMenu{
-    border-top: 0.1px solid gray;
-    border-left: 0.1px solid grey;
-    border-right: 0.1px solid grey;
-    border-bottom: 0.1px solid grey;
-}
-.menu .topMenu #topmenu-kutu{
+.topMenu ul, .downMenu ul {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content:space-evenly;
+    list-style-type: none;
+    border: 1px solid black;
+    width: 1400px;
+}
+.topMenu #ustMenu, .downMenu #altMenu{
+    text-decoration: none;
+    color: black;
+    font-size: medium;
+    font-weight: bolder;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+}
+.topMenu ul li, .downMenu ul li{
     text-align: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
+    margin: 0;
+    width: 200px;
+    height: 50px;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
 }
-
-.menu .topMenu ul li:hover{
-    color: white;
-}
-.menu .downMenu{
-    border-top: 0.1px solid gray;
-    border-left: 0.1px solid grey;
-    border-right: 0.1px solid grey;
-    border-bottom: 0.1px solid grey;
-}
-
-#ustMenu{
-    text-decoration: none;
-    text-align: right;
-    color: black;
-    margin-right: 35px;
-
-}
-#ustMenu:hover{
+.topMenu ul li:hover, .downMenu ul li:hover{
     background-color: black;
-    color: white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
 }
-#altMenu{
-    text-decoration: none;
-    text-align: right;
-    color: black;
-    margin-right: 35px;
-    width: 100%;
-}
-#altMenu:hover{
-    background-color: black;
+.topMenu #ustMenu:hover , .downMenu #altMenu:hover{
     color: white;
 }
 
