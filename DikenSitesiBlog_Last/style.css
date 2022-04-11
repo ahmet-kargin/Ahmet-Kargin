@@ -164,6 +164,9 @@
     justify-content: center;
     margin: 10px;
 }
+#topFooter-icons i:hover{
+    background-color: gray;
+}
 
 #righ-side{
     width: 480px;
