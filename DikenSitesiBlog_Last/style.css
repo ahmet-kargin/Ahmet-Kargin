@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.menu{
+    margin: 30px 50px 50px 50px ;
+    width: 1400px;
+    align-items: center;
+    
+}
+.menu ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 1400px;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+
+}
+.menu ul li{
+    text-align: left;
+    align-items: center;
+}
+.topMenu #topmenu-kutu{
+    border-right: 1px solid black;
+    width: 60px;
+}
+
+.menu .topMenu{
+    border-top: 0.1px solid gray;
+    border-left: 0.1px solid grey;
+    border-right: 0.1px solid grey;
+    border-bottom: 0.1px solid grey;
+}
+.menu .topMenu #topmenu-kutu{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
+.menu .topMenu ul li:hover{
+    color: white;
+}
+.menu .downMenu{
+    border-top: 0.1px solid gray;
+    border-left: 0.1px solid grey;
+    border-right: 0.1px solid grey;
+    border-bottom: 0.1px solid grey;
+}
+
+#ustMenu{
+    text-decoration: none;
+    text-align: right;
+    color: black;
+    margin-right: 35px;
+
+}
+#ustMenu:hover{
+    background-color: black;
+    color: white;
+}
+#altMenu{
+    text-decoration: none;
+    text-align: right;
+    color: black;
+    margin-right: 35px;
+    width: 100%;
+}
+#altMenu:hover{
+    background-color: black;
+    color: white;
+}
+
+#slide-content{
+    /* position: relative; */
+    /* justify-content: center !important; */
+    margin-top: 15px;
+    margin-left: 50px;
+    width: 800px;
+    height: 300px;
+}
+
+#card-content{
+    margin-left: 50px;
+    margin-right: 555px;
+    margin-top:200px;
+    font-size: large;
+}
+#card-content img{
+    width:370px ;
+}
+
+#card-content a:hover, #side-line-content a:hover{
+    color: rgb(255, 196, 0);
+}
+
+#card-baslik, #righ-side-baslik{
+    background-color: gray;
+    text-align: center;
+    opacity: 0.8;
+    
+}
+
+#card-content a, #side-line-content a{
+    text-decoration: none;
+}
+#surdurulebilirlik{
+    margin-left: 50px;
+    margin-right: 555px;
+    margin-top: 30px;
+}
+#surdurulebilirlik-header{
+    background-color: gray;
+    text-align: center;
+    opacity: 0.8;
+}
+#surdurulebilirlik-card, #dikeneTakilanlar-card{
+    height: 250px;
+    width: 800px;
+}
+#surdurulebilirlik-card img, #dikeneTakilanlar-card img{
+    height: 200px;
+}
+#dikeneTakilanlar-header{
+    background-color: gray;
+    text-align: center;
+    opacity: 0.8;
+}
+
+#topFooter{
+    width: 1400px;
+    height: 300px;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: black;
+    border-bottom: 1px solid white;
+}
+#topFooter ul{
+    margin: 20px;
+    text-decoration: none;
+    list-style-type: none;
+}
+#topFooter ul a{
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+
+}
+#topFooter ul a:hover{
+    color: rgb(255, 196, 0);
+
+}
+#downFooter{
+    width: 1400px;
+    font-size: 14px;
+    margin-top: 0px;
+    margin-left: 50px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top:35px ;
+}
+
+#topFooter-icons i{
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+
+#right-side img{
+    width:410px ;
+
+}
+#righ-side-baslik{
+    width: 430px;
+}
+#side-line-content{
+    margin-left: 50px;
+    margin-right: 555px;
+    font-size: large;
+}
+section a{
+    color: black;
+}
+section{
+    display: flex;
+    flex-direction: row;
+}
+
+#side-line-content{
+    justify-content: left;
+    margin-left: -400px;
+}
+#side-line-content{
+    width: 410px;
+}
+#left-side{
+    justify-content: space-around;
+    margin-left: 10px;
+    color: black;
+}
+#left-side p{
+    color: black;
+}
+#gununOnbiri .card-title{
+    background-color: gray;
+    width: 410px;
+    text-align: center;
+}
