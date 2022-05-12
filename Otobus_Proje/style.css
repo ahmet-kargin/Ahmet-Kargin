@@ -127,3 +127,19 @@ display:block;
     list-style: none;
     color: white;
 }
+
+.contact-left{
+    background-color: aliceblue;
+}
+.contact-left h2{
+    text-align: center;
+}
+.contact-right{
+    background-color: aliceblue;
+}
+.contact-right h2{
+    text-align: center;
+}
+.contact-right input{
+    width: 100%;
+}
