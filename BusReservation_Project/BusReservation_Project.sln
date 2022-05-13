@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusReservation_Data", "BusReservation_Data\BusReservation_Data.csproj", "{6EDF4DB8-7CCB-4F78-9B3E-91C10881BCE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusReservation.Data", "BusReservation_Data\BusReservation.Data.csproj", "{6EDF4DB8-7CCB-4F78-9B3E-91C10881BCE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusReservation_Business", "BusReservation_Business\BusReservation_Business.csproj", "{A2005616-472F-4B48-99CA-8902A3771ED9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusReservation.Business", "BusReservation_Business\BusReservation.Business.csproj", "{A2005616-472F-4B48-99CA-8902A3771ED9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusReservation_Entity", "BusReservation_Entity\BusReservation_Entity.csproj", "{A7AD6F89-0BF5-4683-8731-8BE042D84248}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusReservation.Entity", "BusReservation_Entity\BusReservation.Entity.csproj", "{A7AD6F89-0BF5-4683-8731-8BE042D84248}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusReservation_WebUI", "BusReservation_WebUI\BusReservation_WebUI.csproj", "{E1B306F0-8854-4710-B729-716C45F38B58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusReservation.WebUI", "BusReservation_WebUI\BusReservation.WebUI.csproj", "{E1B306F0-8854-4710-B729-716C45F38B58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
