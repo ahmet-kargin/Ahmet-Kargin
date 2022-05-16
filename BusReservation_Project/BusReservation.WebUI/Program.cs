@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BusReservation_WebUI
+namespace BusReservation.WebUI
 {
     public class Program
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace BusReservation_WebUI.Models
+namespace BusReservation.WebUI.Models
 {
     public class ErrorViewModel
     {

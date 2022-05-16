@@ -1,4 +1,4 @@
-﻿using BusReservation_WebUI.Models;
+﻿using BusReservation.WebUI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BusReservation_WebUI.Controllers
+namespace BusReservation.WebUI.Controllers
 {
     public class HomeController : Controller
     {

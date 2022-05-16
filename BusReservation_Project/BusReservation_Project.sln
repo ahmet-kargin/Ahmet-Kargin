@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusReservation.Business", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusReservation.Entity", "BusReservation_Entity\BusReservation.Entity.csproj", "{A7AD6F89-0BF5-4683-8731-8BE042D84248}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusReservation.WebUI", "BusReservation_WebUI\BusReservation.WebUI.csproj", "{E1B306F0-8854-4710-B729-716C45F38B58}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusReservation.WebUI", "BusReservation.WebUI\BusReservation.WebUI.csproj", "{760C2341-5589-4466-AB81-6651F7D0CE34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{A7AD6F89-0BF5-4683-8731-8BE042D84248}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7AD6F89-0BF5-4683-8731-8BE042D84248}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7AD6F89-0BF5-4683-8731-8BE042D84248}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E1B306F0-8854-4710-B729-716C45F38B58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E1B306F0-8854-4710-B729-716C45F38B58}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E1B306F0-8854-4710-B729-716C45F38B58}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E1B306F0-8854-4710-B729-716C45F38B58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{760C2341-5589-4466-AB81-6651F7D0CE34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{760C2341-5589-4466-AB81-6651F7D0CE34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{760C2341-5589-4466-AB81-6651F7D0CE34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{760C2341-5589-4466-AB81-6651F7D0CE34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
