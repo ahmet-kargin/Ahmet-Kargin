@@ -1,64 +1,146 @@
-﻿* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+  
 }
 
-.nav-content ul {
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-    border: 1px solid #e3e3e3;
-    border-radius: 2px solid black;
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
 }
 
-    .nav-content ul li {
-        border-right: 1px solid #e3e3e3;
-        border-radius: 2px solid black;
-        display: flex;
-    }
-
-        .nav-content ul li a {
-            text-decoration: none;
-            color: black;
-            font-weight: 600;
-            padding: 5px;
-        }
-
-            .nav-content ul li a:hover {
-                background-color: black;
-                color: white;
-            }
-
-.nav-link:hover {
-    background-color: red;
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
 }
 
-.activeLink {
-    background-color: red;
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
 }
 
-.menu-label {
-    background-color: rgba(0, 0, 0, 0.888);
-    color: white;
-    text-align: center;
-    border-radius: 5px;
-    padding: 8px;
-    justify-content: center;
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
 }
 
-.expedition {
-    background-color: rgba(0, 0, 0, 0.888);
-    max-width: 1116px;
-    margin-left: 1px;
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
 }
 
-#menu-btn {
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+.container ul li a:hover {
+    background-color: black;
+    color:white !important;
+}
+
+.main-popup {
+    z-index: 2;
+    background-color: black;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
     display: none;
 }
 
-@media (max-width:767px) {
-    .nav-content ul li {
+.popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    margin-top: 150px;
+    position: relative;
+    border-radius: 15px;
+    border: 3px solid blue;
+}
+
+.close-popup {
+    border-radius: 5px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    color: white;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: red;
+}
+
+.content-popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup a {
+    text-decoration: none;
+    background-color: brown;
+    color: white;
+    padding: 5px 10px;
+    font-size: 24px;
+}
+.expedition {
+    background-color: rgba(0, 0, 0, 0.888);
+    max-width: 100%;
+    margin-left: 1px;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+
+
+@media (max-width:990px) {
+    .navbar-collapse ul li {
         flex-wrap: wrap;
         flex-direction: column;
     }
@@ -68,49 +150,29 @@
         flex-direction: column;
     }
 
-    .nav-content ul li a {
-        padding: 6px 15px;
+    
+
+    .popup {
+        flex-wrap: wrap;
+        flex-direction: column;
     }
 
-    .nav-content ul li {
-        justify-content: center;
-    }
-
-    .nav-content {
-        display: none;
-    }
-
-    #menu-btn-div {
-        display: flex;
-        justify-content: center;
-    }
-
-    #menu-btn {
-        display: initial;
-    }
+   
 }
 
-#menu-btn:checked ~ .nav-content {
+.navbar-collapse {
     display: block;
 }
 
-#menu-btn {
-    display: none;
-}
 
 
-@media (min-width:767px) {
-    .nav-content {
+
+@media (min-width:990px) {
+    .navbar-collapse {
         display: block !important;
     }
 
-    .main-footer {
-        display: block !important;
-    }
-
-    label {
-        display: none;
-    }
+   
 }
 
 .footer-text {
@@ -179,57 +241,4 @@
         width: 100%;
     }
 
-.main-popup {
-    z-index: 2;
-    background-color: black;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    opacity: 0.9;
-    display: none;
-}
 
-.popup {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 500px;
-    height: 400px;
-    background-color: rgb(255, 255, 255);
-    margin: auto;
-    margin-top: 150px;
-    position: relative;
-    border-radius: 15px;
-    border: 3px solid red;
-}
-
-.close-popup {
-    border-radius: 5px;
-    cursor: pointer;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    line-height: 25px;
-    color: white;
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    background-color: brown;
-}
-
-.content-popup {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.popup a {
-    text-decoration: none;
-    background-color: brown;
-    color: white;
-    padding: 5px 10px;
-    font-size: 24px;
-}

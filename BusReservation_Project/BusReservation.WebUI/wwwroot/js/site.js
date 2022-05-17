@@ -1,28 +1,4 @@
-﻿$(document).ready(function () {
-    $("li a").each(function () {
-        if ($(this).attr("href") == window.location.pathname) {
-            //$(this).css("background-color", "red")
-            $(this).addClass("activeLink")
-        }
+﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+// for details on configuring this project to bundle and minify static web assets.
 
-    })
-
-})
-
-const tikla = document.querySelector(".UserLogin");
-const mainPopup = document.querySelector(".main-popup");
-const close = document.querySelector(".close-popup");
-
-tikla.addEventListener("click", () => {
-    mainPopup.style.display = "block";
-})
-
-// close.addEventListener("click",()=>{
-//     mainPopup.style.display="none";
-// })
-
-mainPopup.addEventListener("click", e => {
-    if (e.target.className == "main-popup" || e.target.className == "close-popup") {
-        mainPopup.style.display = "none";
-    }
-})
+// Write your JavaScript code.
