@@ -12,6 +12,10 @@ namespace BusReservation.Business.Concrete
     public class TicketManager : ITicketService
     {
         private ITicketRepository _ticketRepository;
+        public TicketManager(ITicketRepository ticketRepository)
+        {
+            _ticketRepository = ticketRepository;
+        }
         public void Create(Ticket entity)
         {
             _ticketRepository.Create(entity);
@@ -19,12 +23,12 @@ namespace BusReservation.Business.Concrete
 
         public void Delete(Ticket entity)
         {
-            throw new NotImplementedException();
+            _ticketRepository.Delete(entity);
         }
 
         public List<Ticket> GetAll()
         {
-            throw new NotImplementedException();
+            return _ticketRepository.GetAll();
         }
 
         public Ticket GetById(int id)
@@ -64,7 +68,7 @@ namespace BusReservation.Business.Concrete
 
         public void Update(Ticket entity)
         {
-            throw new NotImplementedException();
+            _ticketRepository.Update(entity);
         }
 
         public void Update(Ticket entity, int[] ticketIds)

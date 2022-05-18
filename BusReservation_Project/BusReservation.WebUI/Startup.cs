@@ -1,3 +1,5 @@
+using BusReservation.Business.Abstract;
+using BusReservation.Business.Concrete;
 using BusReservation.Data.Abstract;
 using BusReservation.Data.Concrete;
 using Microsoft.AspNetCore.Builder;
@@ -27,12 +29,11 @@ namespace BusReservation.WebUI
         {
             services.AddScoped<ITicketRepository, EfCoreTicketRepository>();
 
-            services.AddScoped<ITicketRepository, BiletManager>();
-            services.AddScoped<IGuzergahRepository, EfCoreGuzergahRepository>();
-            services.AddScoped<IGuzergahService, GuzergahManager>();
-            services.AddScoped<ISehirRepository, EfCoreSehirRepository>();
-            services.AddScoped<ISehirService, SehirManager>();
-            services.AddControllersWithViews();
+            services.AddScoped<ITicketService, TicketManager>();
+            services.AddScoped<IDirectionRepository, EfCoreDirectionRepository>();
+            services.AddScoped<IDirectionService, DirectionManager>();
+            services.AddScoped<ICityRepository, EfCoreCityRepository>();
+            services.AddScoped<ICityService, CityManager>();
             services.AddControllersWithViews();
         }
 

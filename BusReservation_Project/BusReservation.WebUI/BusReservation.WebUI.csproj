@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BusReservation.Business\BusReservation.Business.csproj" />
     <ProjectReference Include="..\BusReservation.Data\BusReservation.Data.csproj" />
   </ItemGroup>
 
