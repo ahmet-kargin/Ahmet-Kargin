@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace BusReservation.Data.Abstract
 {
-    public interface ITicketRepository
+    public interface ITicketRepository: IRepository<Ticket>
     {
-        int GetCountBySeat(int guzergahId);
-        List<int> GetSeat(int guzergahId);
+        int GetCountBySeat(int directionId);
+        List<int> GetSeat(int directionId);
         Ticket GetLastSave();
         int GetId();
         string GetDate(int id);

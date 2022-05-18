@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BusReservation.Data.Abstract
 {
-    public interface ISehirRepository : IRepository<Ticket>
+    public interface ICityRepository : IRepository<City>
     {
         string CityName();
     }

@@ -56,17 +56,17 @@ namespace BusReservation.Data.Concrete
             new Ticket(){TicketId=9, PassengerName="Beyazit", PassengerSurname="Lale", PassengerMail="beyazit@gmail.com",PassengerTel="05533656555", TicketDepartureCity="İstanbul", TicketArrivalCity="Ankara", SeatNo=9, Price=600, DirectionId=2}
 
         };
-        private static Sehir[] Sehirs =
+        private static City[] Cities =
         {
-            new Sehir(){ SehirId=1, SehirAd= "İstanbul"},
-            new Sehir(){ SehirId=2, SehirAd= "Kocaeli"},
-            new Sehir(){ SehirId=3, SehirAd= "Kütahya"},
-            new Sehir(){ SehirId=4, SehirAd= "Afyon"},
-            new Sehir(){ SehirId=5, SehirAd= "Isparta"},
-
-            new Sehir(){ SehirId=6, SehirAd= "Samsun"},
-            new Sehir(){ SehirId=7, SehirAd= "Ordu"},
-            new Sehir(){ SehirId=8, SehirAd= "Rize"}
+            new City(){ CityId=1, CityName= "İstanbul"},
+            new City(){ CityId=2, CityName= "Ankara"},
+            new City(){ CityId=3, CityName= "Malatya"},
+            new City(){ CityId=4, CityName= "Trabzon"},
+            new City(){ CityId=5, CityName= "Muğla"},
+            new City(){ CityId=6, CityName= "İzmir"},
+            new City(){ CityId=7, CityName= "Samsun"},
+            new City(){ CityId=8, CityName= "Kastamonu"},
+            new City(){ CityId=8, CityName= "Mardin"}
         };
     }
 }

@@ -1,3 +1,5 @@
+using BusReservation.Data.Abstract;
+using BusReservation.Data.Concrete;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -23,6 +25,14 @@ namespace BusReservation.WebUI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<ITicketRepository, EfCoreTicketRepository>();
+
+            services.AddScoped<ITicketRepository, BiletManager>();
+            services.AddScoped<IGuzergahRepository, EfCoreGuzergahRepository>();
+            services.AddScoped<IGuzergahService, GuzergahManager>();
+            services.AddScoped<ISehirRepository, EfCoreSehirRepository>();
+            services.AddScoped<ISehirService, SehirManager>();
+            services.AddControllersWithViews();
             services.AddControllersWithViews();
         }
 

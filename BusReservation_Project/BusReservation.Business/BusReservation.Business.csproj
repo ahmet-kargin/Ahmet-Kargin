@@ -4,4 +4,9 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BusReservation.Data\BusReservation.Data.csproj" />
+    <ProjectReference Include="..\BusReservation.Entity\BusReservation.Entity.csproj" />
+  </ItemGroup>
+
 </Project>

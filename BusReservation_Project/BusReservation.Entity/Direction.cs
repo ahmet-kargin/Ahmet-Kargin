@@ -12,9 +12,7 @@ namespace BusReservation.Entity
         public string Date { get; set; }
         public string Time { get; set; }
         public double Price { get; set; }
-
         public List<Ticket> Tickets { get; set; }
-        public int CityId { get; set; }
-        public City City { get; set; }
+       
     }
 }
