@@ -42,6 +42,7 @@ namespace BusReservation.WebUI
         {
             if (env.IsDevelopment())
             {
+                SeedDatabase.Seed();
                 app.UseDeveloperExceptionPage();
             }
             else

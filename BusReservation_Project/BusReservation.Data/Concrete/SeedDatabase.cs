@@ -66,7 +66,7 @@ namespace BusReservation.Data.Concrete
             new City(){ CityId=6, CityName= "İzmir"},
             new City(){ CityId=7, CityName= "Samsun"},
             new City(){ CityId=8, CityName= "Kastamonu"},
-            new City(){ CityId=8, CityName= "Mardin"}
+            new City(){ CityId=9, CityName= "Mardin"}
         };
     }
 }
