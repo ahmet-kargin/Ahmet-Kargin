@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BusReservation.Data.Concrete
 {
-    public class SeedDatabase
+    public static class SeedDatabase
     {
         public static void Seed()
         {
@@ -38,9 +38,9 @@ namespace BusReservation.Data.Concrete
 
         private static Direction[] Directions =
         {
-            new Direction(){ DirectionId=1, Date="10.05.2022", Time="18.00",Price=500},
-            new Direction(){ DirectionId=2, Date="11.05.2022", Time="19.00",Price=600},
-            new Direction(){ DirectionId=3, Date="12.05.2022", Time="20.00",Price=700},
+            new Direction(){ DirectionId=1, Start="İstanbul", Finish="Malatya", Date="10.05.2022", Time="18.00",Price=500},
+            new Direction(){ DirectionId=2, Start="Malatya", Finish="İstanbul", Date="11.05.2022", Time="19.00",Price=600},
+            new Direction(){ DirectionId=3, Start="Ankara", Finish="Malatya", Date="12.05.2022", Time="20.00",Price=700},
             };
 
         private static Ticket[] Tickets =

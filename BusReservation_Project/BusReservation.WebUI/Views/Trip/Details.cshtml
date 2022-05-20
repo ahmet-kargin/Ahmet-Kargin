@@ -1,0 +1,97 @@
+﻿@model Ticket
+
+@{ var Price = Model.Price; }
+@if (ViewBag.Sayi < 5)
+{
+    Price = Price;
+}
+@if (ViewBag.Number > 10 && ViewBag.Number <= 15)
+{
+    Price = Price + Price*0.05;
+}
+@if (ViewBag.Sayi > 15 && ViewBag.Sayi <= 20)
+{
+    Price = Price + Price * 0.10;
+}
+@if (ViewBag.Sayi > 20 && ViewBag.Sayi <= 30)
+{
+    Price = Price + Price * 0.20;
+}
+@if (ViewBag.Sayi > 30)
+{
+    Price = Price + Price * 0.30;
+}
+
+
+
+
+
+@{ var Price1 = @Price * 0.8;
+    var Price2 = @Price * 0.7;
+    var Price3 = @Price * 0.6;
+    var Price4 = @Price * 0.5;
+    var Price5 = @Price * 0.45;
+}
+<div class="card mb-3 shadow">
+
+    <div class="card-title pl-3 pt-3">
+        <h1>@TempData["departureCity"] - @TempData["arrivalCity"]</h1>
+    </div>
+    <div class="card-body">
+        <form action="/trip/details" method="POST" style="display:inline;">
+            <div class="row no-gutters">
+                <div class="col-md-8">
+                    <h4>@Model.TicketDepartureCity > @Model.TicketArrivalCity Bus</h4>
+                    <p><b>Direction: </b> @Model.TicketDepartureCity > @Model.TicketArrivalCity</p>
+                    <p>@Model.Direction.Date  -  @Model.Direction.Time</p>
+                    <br />
+                    <p>Sold Seat Number: @ViewBag.Number</p>
+
+
+
+                    <input type="hidden" name="ticketId" value="@Model.TicketId" />
+
+
+
+                    @if ((@TempData["departureCity"].ToString() == @Model.TicketDepartureCity) && (@TempData["arrivalCity"].ToString() == @Model.TicketArrivalCity))
+                    {
+                        <p style="text-align: right; font-size:26px;">@Price ₺</p>
+                        <input type="hidden" name="Price" value="@Price" />
+                    }
+                    
+                    
+                    <input type="hidden" name="departureCity" value="@TempData["departureCity"].ToString()" />
+                    <input type="hidden" name="arrivalCity" value="@TempData["nereye"].ToString()" />
+
+
+
+                </div>
+
+                <div class="row no-gutters">
+
+                    <div class="col-md-12">
+                        <br /><br /><hr /><br />
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-Mail" required="required" style="width: 1000px; margin-left: 30px;">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" id="" aria-describedby="" placeholder="İsim" required="required" style="width: 1000px; margin-left: 30px;">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="surname" class="form-control" id="" aria-describedby="" placeholder="Soyisim" required="required" style="width: 1000px;margin-left: 30px;">
+                        </div>
+                        <div class="form-group">
+                            <select name="seatNo" class="form-select form-select-lg mb-3" asp-items="@ViewBag.Koltuklar" required="required" style="width: 1000px; height:30px; margin-left: 30px;" required="required">
+                                <option selected disabled>Select a Seat</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-danger btn-lg" style="color: white;margin-left: 38px;">Buy Ticket</button>
+                    <br />
+                </div><br />
+            </div>
+        </form>
+    </div><br />
+
+</div>
+<br />

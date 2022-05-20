@@ -12,6 +12,10 @@ namespace BusReservation.Business.Concrete
     public class CityManager : ICityService
     {
         private ICityRepository _cityRepository;
+        public CityManager(ICityRepository cityRepository)
+        {
+            _cityRepository = cityRepository;
+        }
         public string CityName()
         {
             throw new NotImplementedException();

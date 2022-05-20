@@ -55,19 +55,19 @@ namespace BusReservation.Data.Concrete
         {
             using (var context = new TicketContext())
             {
-                var nrdn = context.Cities
+                var departureCity = context.Cities
                     .Where(i => i.CityId == Convert.ToInt32(departure))
                     .Select(i => i.CityName)
                     .ToList();
-                var nry = context.Cities
+                var arrivalCity = context.Cities
                     .Where(i => i.CityId == Convert.ToInt32(arrival))
                     .Select(i => i.CityName)
                     .ToList();
-                var guzergahs = context.Directions
-                    .FromSqlRaw($"select * from Guzergahs where ((Baslangic='{nrdn[0]}') and (Bitis='{nry[0]}' )) ")
+                var directions = context.Directions
+                    .FromSqlRaw($"select * from Directions where ((Start='{departureCity[0]}') and (Finish='{arrivalCity[0]}' )) ")
                     .ToList();
 
-                return guzergahs;
+                return directions;
 
             }
         }

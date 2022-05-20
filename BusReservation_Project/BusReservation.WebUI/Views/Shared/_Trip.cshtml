@@ -1,0 +1,20 @@
+﻿@model Ticket
+
+<div class="card mb-4 mt-3 shadow">
+
+    <div class="card-body">
+        <a class="card-title" asp-controller="Yolculuk" asp-action="Details" asp-route-id="@Model.TicketId" style="text-decoration:none; font-size:24px;">@Model.TicketDepartureCity <i class="fas fa-long-arrow-alt-right"></i> @Model.TicketArrivalCity</a>
+        <p class="card-text"><b style="font-size:19px;">Güzergah:</b>  @Model.TicketDepartureCity> @Model.TicketDepartureCity</p><br />
+
+        <p style=" font-size:24px; text-align:center;">
+            <b>@Model.Direction.Date </b>
+            - @Model.Direction.Time
+        </p>
+
+
+    </div>
+    <div class="card-footer text-center">
+        <a asp-controller="Trip" asp-action="Details" asp-route-id="@Model.TicketId" class="btn btn-primary btn-sm">Control</a>
+
+    </div>
+</div>   

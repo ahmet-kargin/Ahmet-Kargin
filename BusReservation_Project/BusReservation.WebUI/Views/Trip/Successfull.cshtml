@@ -1,0 +1,47 @@
+﻿@model TicketDirection
+
+<div class="container shadow" style="text-align:center;">
+    <br />
+    <i class="fas fa-check-circle" style="font-size:36px; color:green;"></i><br />
+    <br /><p> Sayın @Model.Ticket.PassengerName @Model.Ticket.PassengerSurname, @Model.Ticket.TicketId -> @Model.Ticket.TicketArrivalCity Ticket purchase successful</p> <br />
+    <a asp-controller="home" asp-action="contact">Contact</a>
+    <br /><hr /><br />
+    <h3>Ticket Information</h3><br />
+
+    <table class="table table table-bordered shadow-sm">
+        <thead>
+            <tr>
+                <th style="width:40px;">Seat No</th>
+                <th style="width:200px;">Full Name</th>
+                <th style="">Mail</th>
+                <th style="width:105px;">Departure City</th>
+                <th style="width:105px;">Arrival City</th>
+                <th style="width:60px;">Seat No</th>
+                <th style="width:80px;">Price</th>
+                <th style="width:200px;">Date and Time</th>
+
+                <th style="width:75px;">Trip No</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.Ticket.TicketId</td>
+                <td>@Model.Ticket.PassengerName @Model.Ticket.PassengerSurname</td>
+
+                <td>@Model.Ticket.PassengerMail</td>
+                <td>@Model.Ticket.TicketDepartureCity</td>
+                <td>@Model.Ticket.TicketArrivalCity</td>
+                <td>@Model.Ticket.SeatNo</td>
+                <td>@Model.Ticket.Price ₺</td>
+                <td>@Model.Date - @Model.Time</td>
+
+
+
+                <td>@Model.Ticket.DirectionId</td>
+
+            </tr>
+        </tbody>
+    </table>
+    <br />
+</div>

@@ -9,6 +9,8 @@ namespace BusReservation.Entity
     public class Direction
     {
         public int DirectionId { get; set; }
+        public string Start { get; set; }
+        public string Finish { get; set; }
         public string Date { get; set; }
         public string Time { get; set; }
         public double Price { get; set; }

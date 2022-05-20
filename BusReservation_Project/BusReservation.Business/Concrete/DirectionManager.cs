@@ -39,7 +39,7 @@ namespace BusReservation.Business.Concrete
 
         public Direction GetById(int id)
         {
-            throw new NotImplementedException();
+            return _directionRepository.GetById(id);
         }
 
         public string GetDepartureCity(string departure)

@@ -1,5 +1,7 @@
-﻿using BusReservation.WebUI.Models;
+﻿using BusReservation.Business.Abstract;
+using BusReservation.WebUI.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -11,27 +13,45 @@ namespace BusReservation.WebUI.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ICityService _cityService;
+        private readonly IDirectionService _directionService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ICityService cityService, IDirectionService directionService )
         {
-            _logger = logger;
+            _cityService = cityService;
+            _directionService = directionService;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string departureCity, string arrivalCity)
         {
+            if (departureCity==null || arrivalCity==null||departureCity==arrivalCity)
+            {
+                var cityModel = new TicketDirection()
+                {
+                    Cities = _cityService.GetAll(),
+                    Directions = null
+                };
+                ViewBag.Cities = new SelectList(cityModel.Cities, "CityId", "CityName");
+                return View(cityModel);
+            }
+            else
+            {
+                var cityModel = new TicketDirection()
+                {
+                    Cities=_cityService.GetAll(),
+                    Directions=_directionService.GetTrip(departureCity,arrivalCity)
+                };
+                TempData["departureCity"] = _directionService.GetDepartureCity(departureCity);
+                TempData["arrivalCity"] = _directionService.GetArrivalCity(arrivalCity);
+                ViewBag.Cities = new SelectList(cityModel.Cities, "CityId", "CityName");
+                return View(cityModel);
+            }
+
+        }
+        public IActionResult Contact()
+        {
+            ViewData["title"] = "Contact : ";
             return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

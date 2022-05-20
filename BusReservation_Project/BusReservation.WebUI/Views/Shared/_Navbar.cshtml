@@ -1,0 +1,68 @@
+﻿<header>
+    <img src="~/img/sky1.jpg" alt="Alternate Text" class="w-100" style="height:100px;" />
+
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+
+        <div class="container">
+            <img src="~/img/bluebuslogo1.jpg" alt="Alternate Text" />
+            <a class="navbar-brand font-italic" asp-area="" asp-controller="Home" asp-action="Index">BLUE BUS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Expeditions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">City Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Our Branches</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Online Reservation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="AdminList">Admin List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Contact" asp-action="Contact">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button type="button" class=" UserLogin btn btn-lg btn-warning" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?"><i class="fa-solid fa-user" style="color: black; text-decoration: none;"></i>User Login</button>
+                    <div class="main-popup">
+                        <div class="popup">
+                            <div class="close-popup">X</div>
+                            <div class="content-popup">
+                                <h3 class="font-weight-bold">BLUE BUS</h3>
+                                <div class="row text-center mt-3">
+                                    <div class="col-md-3">
+                                        <label>Name</label>
+                                        <label>Surname</label>
+                                        <label>Password</label>
+                                    </div>
+                                    <div class="col-md-9 ">
+                                        <input type="text" name="name" value="" />
+                                        <input type="text" name="name" value="" />
+                                        <input type="password" value="FakePSW" id="myInput"><br><br>
+                                        <input type="checkbox" onclick="myFunction()">Show Password
+                                        <button class="btn btn-sm btn-success">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
