@@ -9,12 +9,11 @@ namespace BusReservation.Entity
     public class Direction
     {
         public int DirectionId { get; set; }
-        public string Start { get; set; }
-        public string Finish { get; set; }
-        public string Date { get; set; }
-        public string Time { get; set; }
+        public string StartCity { get; set; }
+        public string FinishCity { get; set; }
+        public DateTime Date { get; set; }
         public double Price { get; set; }
-        public List<Ticket> Tickets { get; set; }
-       
+        public int SeatTotalNumber { get; set; }
+        
     }
 }

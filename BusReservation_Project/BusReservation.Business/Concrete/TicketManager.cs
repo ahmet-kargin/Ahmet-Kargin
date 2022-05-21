@@ -58,7 +58,7 @@ namespace BusReservation.Business.Concrete
 
         public List<int> GetSeat(int DirectionId)
         {
-            throw new NotImplementedException();
+            return _ticketRepository.GetSeat(DirectionId);
         }
 
         public string GetTime(int id)

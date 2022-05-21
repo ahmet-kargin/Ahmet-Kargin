@@ -11,7 +11,7 @@ namespace BusReservation.Data.Abstract
     {
         string GetDepartureCity(string departure);
         string GetArrivalCity(string arrival);
-        List<Direction> GetTrip(string departure, string arrival);
+        List<Direction> GetTrip(string departure, string arrival,DateTime date);
         int GetDirectionByBslBts(string departure, string arrival);
         Direction GetDirectionDetails(int id);
     }

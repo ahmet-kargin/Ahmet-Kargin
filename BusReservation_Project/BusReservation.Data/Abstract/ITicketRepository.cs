@@ -13,7 +13,7 @@ namespace BusReservation.Data.Abstract
         List<int> GetSeat(int directionId);
         Ticket GetLastSave();
         int GetId();
-        string GetDate(int id);
+        DateTime GetDate(int id);
         string GetTime(int id);
     }
 }

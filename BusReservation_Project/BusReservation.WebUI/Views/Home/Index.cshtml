@@ -7,12 +7,29 @@
     <div class="form-group" style="display: inline;">
         <form action="/home/index" class="form-inline">
             <select name="departureCity" class="form-select form-select-lg mb-3" asp-items="@ViewBag.Cities" style="width: 505px; height:53px;">
-                <option selected disabled>DepartureCity</option>
+                @if (Model.Directions != null)
+                {
+                    <option selected>@ViewBag.DepartureCity</option>
+                }
+                else
+                {
+                    <option selected>DepartureCity</option>
+                }
+
             </select>
             <i class="fas fa-long-arrow-alt-right" style="padding: 0px 20px; font-size: 22px;"></i>
             <select name="arrivalCity" class="form-select form-select-lg mb-3" asp-items="@ViewBag.Cities" style="width: 505px; height:53px;">
-                <option selected disabled>ArrivalCity</option>
+                @if (Model.Directions != null)
+                {
+                    <option selected>@ViewBag.ArrivalCity</option>
+                }
+                else
+                {
+                    <option selected>ArrivalCity</option>
+                }
+
             </select>
+            <input type="date" asp-for="Date" class="form-control" min="2022-05-20" />
             <button type="submit" class="btn btn-danger btn-lg btn-block">Find a Trip</button>
         </form>
     </div>
@@ -24,7 +41,7 @@
             {
 
                 <div class="col-md-6">
-                    @await Html.PartialAsync("_Trip", item)
+                    @await Html.PartialAsync("_SummaryTrip", item)
 
                 </div>
             }

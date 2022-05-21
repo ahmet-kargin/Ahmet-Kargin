@@ -25,17 +25,17 @@
                     @foreach (var item in Model.Tickets)
                     {
                         <tr>
-                            <td>@item.TicketId</td>
+                            @*<td>@item.TicketId</td>
                             <td>@item.PassengerName @item.PassengerSurname</td>
                             <td>@item.PassengerMail</td>
                             <td>@item.TicketDepartureCity</td>
                             <td>@item.TicketArrivalCity</td>
                             <td>@item.SeatNo</td>
                             <td>@item.Price ₺</td>
-                            <td>@item.DirectionId</td>
+                            <td>@item.DirectionId</td>*@
                             <td>
                                 <form action="/User/cancellation" method="POST" style="display:inline;">
-                                    <input type="hidden" name="biletId" value="@item.TicketId" />
+                                   @* <input type="hidden" name="biletId" value="@item.TicketId" />*@
                                     <button type="submit" class="btn btn-danger btn-md mr-2" style="color: white;">Cancel the Ticket</button>
                                 </form>
                             </td>

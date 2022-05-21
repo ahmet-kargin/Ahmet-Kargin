@@ -11,12 +11,12 @@ namespace BusReservation.Data.Concrete
     public class EfCoreGenericRepository<TEntity, TContext> : IRepository<TEntity> where TEntity : class
         where TContext:DbContext , new()
     {
-        public void Create(TEntity entity)
+        public int Create(TEntity entity)
         {
             using (var context =new TContext())
             {
                 context.Set<TEntity>().Add(entity);
-                context.SaveChanges();
+                return context.SaveChanges();
             }
         }
 

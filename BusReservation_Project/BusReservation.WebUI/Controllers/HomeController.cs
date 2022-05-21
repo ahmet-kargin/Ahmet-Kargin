@@ -22,16 +22,16 @@ namespace BusReservation.WebUI.Controllers
             _directionService = directionService;
         }
 
-        public IActionResult Index(string departureCity, string arrivalCity)
+        public IActionResult Index(string departureCity, string arrivalCity,DateTime date)
         {
-            if (departureCity==null || arrivalCity==null||departureCity==arrivalCity)
+            if (departureCity==null || arrivalCity==null||departureCity==arrivalCity || date ==null)
             {
                 var cityModel = new TicketDirection()
                 {
                     Cities = _cityService.GetAll(),
                     Directions = null
                 };
-                ViewBag.Cities = new SelectList(cityModel.Cities, "CityId", "CityName");
+                ViewBag.Cities = new SelectList(cityModel.Cities, "CityName", "CityName");
                 return View(cityModel);
             }
             else
@@ -39,11 +39,11 @@ namespace BusReservation.WebUI.Controllers
                 var cityModel = new TicketDirection()
                 {
                     Cities=_cityService.GetAll(),
-                    Directions=_directionService.GetTrip(departureCity,arrivalCity)
+                    Directions=_directionService.GetTrip(departureCity,arrivalCity,date)
                 };
-                TempData["departureCity"] = _directionService.GetDepartureCity(departureCity);
-                TempData["arrivalCity"] = _directionService.GetArrivalCity(arrivalCity);
-                ViewBag.Cities = new SelectList(cityModel.Cities, "CityId", "CityName");
+                ViewBag.DepartureCity = departureCity;
+                ViewBag.ArrivalCity = arrivalCity;
+                ViewBag.Cities = new SelectList(cityModel.Cities, "CityName", "CityName");
                 return View(cityModel);
             }
 

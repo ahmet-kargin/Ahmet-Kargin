@@ -51,23 +51,25 @@ namespace BusReservation.Data.Concrete
             }
         }
 
-        public List<Direction> GetTrip(string departure, string arrival)
+        public List<Direction> GetTrip(string departure, string arrival,DateTime date)
         {
             using (var context = new TicketContext())
             {
-                var departureCity = context.Cities
-                    .Where(i => i.CityId == Convert.ToInt32(departure))
-                    .Select(i => i.CityName)
-                    .ToList();
-                var arrivalCity = context.Cities
-                    .Where(i => i.CityId == Convert.ToInt32(arrival))
-                    .Select(i => i.CityName)
-                    .ToList();
+                //var departureCity = context.Cities
+                //    .Where(i => i.CityId == Convert.ToInt32(departure))
+                //    .Select(i => i.CityName)
+                //    .ToList();
+                //var arrivalCity = context.Cities
+                //    .Where(i => i.CityId == Convert.ToInt32(arrival))
+                //    .Select(i => i.CityName)
+                //    .ToList();
+                var startDate = date.AddSeconds(-10);
+                var endDate = date.AddDays(1).AddSeconds(-10);
                 var directions = context.Directions
-                    .FromSqlRaw($"select * from Directions where ((Start='{departureCity[0]}') and (Finish='{arrivalCity[0]}' )) ")
-                    .ToList();
+                    .FromSqlRaw($"select * from Directions where ((StartCity='{departure}') and (FinishCity='{arrival}' ) and (Date >= '{startDate}' and Date < '{endDate}')) ")
+                    .ToList(); 
 
-                return directions;
+                 return directions;
 
             }
         }

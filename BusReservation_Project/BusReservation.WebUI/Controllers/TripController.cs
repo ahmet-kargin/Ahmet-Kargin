@@ -51,8 +51,8 @@ namespace BusReservation.WebUI.Controllers
                 PassengerName = passengerName,
                 PassengerSurname = passengerSurname,
                 PassengerMail = passengerMail,
-                TicketDepartureCity = departureCity,
-                TicketArrivalCity = arrivalCity,
+                //TicketDepartureCity = departureCity,
+                //TicketArrivalCity = arrivalCity,
                 SeatNo = seatNo,
                 Price = price,
                 DirectionId = directionId

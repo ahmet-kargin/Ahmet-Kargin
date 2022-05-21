@@ -1,0 +1,99 @@
+﻿@model List<BusReservation.Entity.Direction>
+@{
+    ViewData["Title"] = "Direction";
+}
+
+<div class="container shadow" style="margin-bottom: 100px; padding: 10px 14px;">
+    <div>
+        <button class="btn btn-sm btn-success" ><a class="text-decoration-none text-white"  href="/direction/add">ADD DIRECTION</a></button>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="h3">Direction List</h1> <hr /> <br />
+            <table class="table table table-bordered shadow-sm mt-3">
+                <thead>
+                    <tr>
+                        <th style="width:20px;">#</th>
+                        <th style="width:25px;">Departure City</th>
+                        <th style="width:25px;">Arrival City</th>
+                        <th style="width:70px;">DATE</th>
+                        <th style="width:80px;">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Count > 0)
+                    {
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.DirectionId</td>
+                                <td>@item.StartCity</td>
+                                <td>@item.FinishCity</td>
+                                <td>@item.Date.ToShortDateString() - @item.Date.ToShortTimeString()</td>
+                                <td>@item.Price</td>
+
+                            </tr>
+                        }
+                    } 
+                    else
+                    {
+                        <p>No direction found!!!</p>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+
+</div>
+
+
+<!--FOOTER START-->
+<div class=" main-footer row">
+    <div class="col-md-12">
+        <div class="footer-widget d-flex ">
+            <div class="widgets-1 mr-5">
+                <div class="widget-1-menu m-2 col-md-4">
+                    <ul class="list-unstyled">
+                        <li><a href="" style="color: white; text-decoration: none; ">ABOUT</a></li>
+                        <li><a href="" style="color: white; text-decoration: none; ">EXPEDİTİONS</a></li>
+                        <li><a href="" style="color: white; text-decoration: none; ">CITY SERVICES</a></li>
+                        <li><a href="" style="color: white; text-decoration: none; font-size: small; ">*BUY TICKET</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="widget-2 mr-5">
+                <div class="widget-2-menu m-2 col-md-4 ">
+                    <ul class="list-unstyled">
+                        <li><a href="" style="color: white; text-decoration: none; ">OUR BRANCHES</a></li>
+                        <li><a href="" style="color: white; text-decoration: none; ">TICKET INQUIRY</a></li>
+                        <li><a href="" style="color: white; text-decoration: none; ">CONTACT</a></li>
+                        <li><a href="" style="color: white; text-decoration: none; ">ONLINE RESERVATION</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="widget-3 mr-5">
+                <div class="widget-3-menu m-2 col-md-4 ">
+                    <ul class="list-unstyled">
+
+                        <ul class="list-unstyled d-flex flex-wrap">
+                            <li><a href=""> <img src="~/img/instagram.png" alt=""></a></li>
+                            <br />
+                            <li>
+                                <a href="">
+                                    <img src="~/img/facebook.png"
+                                         alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--FOOTER END-->

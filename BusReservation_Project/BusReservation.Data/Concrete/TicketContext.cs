@@ -13,6 +13,7 @@ namespace BusReservation.Data.Concrete
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Direction> Directions { get; set; }
         public DbSet<City> Cities { get; set; }
+        public DbSet<ChooseSeat> ChooseSeats { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source=TicketDb");

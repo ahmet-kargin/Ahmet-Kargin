@@ -1,0 +1,115 @@
+﻿@model BusReservation.WebUI.Models.Direction.AddViewModel
+<h5 class="display-4">Create Direction</h5>
+<hr />
+<form asp-controller="Direction" asp-action="Add" method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-md-8">
+
+
+            <div class="form-group row mb-2">
+                <label class="col-form-label col-sm-3">Start City:</label>
+                <div class="col-sm-9">
+                    <select name="StartCity" class="form-select form-select-lg mb-3" asp-items="@Model.CitySelectList" style="width: 505px; height:53px;">
+                        <option selected disabled>StartCity</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row mb-2">
+                <label class="col-form-label col-sm-3">Finish City:</label>
+                <div class="col-sm-9">
+                    <select name="FinishCity" class="form-select form-select-lg mb-3" asp-items="@Model.CitySelectList" style="width: 505px; height:53px;">
+                        <option selected disabled>FinishCity</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row mb-2">
+                <label class="col-form-label col-sm-3">Date:</label>
+                <div class="col-sm-7">
+                    <input type="datetime-local" asp-for="Date" class="form-control" min="2022-05-20" />
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row mb-2">
+                <label class="col-form-label col-sm-3">Price:</label>
+                <div class="col-sm-7">
+                    <input type="number" asp-for="Price" class="form-control" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row mb-2">
+                <label class="col-form-label col-sm-3">Total Seat:</label>
+                <div class="col-sm-7">
+                    <input type="number" asp-for="SeatTotalNumber" class="form-control" />
+                    <span asp-validation-for="SeatTotalNumber" class="text-danger"></span>
+                </div>
+            </div>
+
+
+            @*<div class="form-group row mb-2">
+            <label class="col-form-label col-sm-3">Name:</label>
+            <div class="col-sm-9">
+                <input type="text" asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group row mb-2">
+            <label class="col-form-label col-sm-3">Description:</label>
+            <div class="col-sm-9">
+                <input type="text" asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group row mb-2">
+            <label class="col-form-label col-sm-3">Image:</label>
+            <div class="col-sm-9">
+                <input type="file" name="file" class="form-control" />
+                <span class="text-danger">@ViewBag.ImageMessage</span>
+            </div>
+        </div>
+
+        <div class="form-group row mb-2">
+            <label class="col-form-label col-sm-3">Price:</label>
+            <div class="col-sm-9">
+                <input type="text" asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+        </div>*@
+
+            <div class="form-group row mb-2">
+                <div class="col-sm-9">
+                    <button type="submit" class="btn btn-primary">Save Direction</button>
+                </div>
+            </div>
+        </div>
+        @*<div class="col-md-4">
+
+            @foreach (var item in (List<Category>)ViewBag.Categories)
+            {
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input"
+                           value="@item.CategoryId"
+                           name="categoryIds" id="category_@item.CategoryId"
+                           @{ try { @if (Model != null) { @(Model.SelectedCategories.Any(i => i.CategoryId == item.CategoryId) ? "checked" : "") }  } catch (Exception) { } } />
+                    <label class="form-check-label">@item.Name</label>
+                </div>
+            }
+            <span class="text-danger">@ViewBag.CategoryMessage</span>
+            <hr />
+            <div class="form-check">
+                <input type="checkbox" asp-for="IsApproved" class="form-check-input" />
+                <label class="form-check-label">Is Approved?</label>
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" asp-for="IsHome" class="form-check-input" />
+                <label class="form-check-label">Is Home?</label>
+            </div>*@
+        </div>
+    </div>
+</form>

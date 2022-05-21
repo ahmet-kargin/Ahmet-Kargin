@@ -3,7 +3,7 @@
 <div class="container shadow" style="text-align:center;">
     <br />
     <i class="fas fa-check-circle" style="font-size:36px; color:green;"></i><br />
-    <br /><p> Sayın @Model.Ticket.PassengerName @Model.Ticket.PassengerSurname, @Model.Ticket.TicketId -> @Model.Ticket.TicketArrivalCity Ticket purchase successful</p> <br />
+    @*<br /><p> Sayın @Model.Ticket.PassengerName @Model.Ticket.PassengerSurname, @Model.Ticket.TicketId -> @Model.Ticket.TicketArrivalCity Ticket purchase successful</p> <br />*@
     <a asp-controller="home" asp-action="contact">Contact</a>
     <br /><hr /><br />
     <h3>Ticket Information</h3><br />
@@ -26,7 +26,7 @@
         </thead>
         <tbody>
             <tr>
-                <td>@Model.Ticket.TicketId</td>
+                @*<td>@Model.Ticket.TicketId</td>
                 <td>@Model.Ticket.PassengerName @Model.Ticket.PassengerSurname</td>
 
                 <td>@Model.Ticket.PassengerMail</td>
@@ -38,7 +38,7 @@
 
 
 
-                <td>@Model.Ticket.DirectionId</td>
+                <td>@Model.Ticket.DirectionId</td>*@
 
             </tr>
         </tbody>

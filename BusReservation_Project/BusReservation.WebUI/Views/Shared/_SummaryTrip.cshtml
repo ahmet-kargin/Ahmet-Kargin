@@ -1,0 +1,20 @@
+﻿@model Direction
+
+<div class="card mb-4 mt-3 shadow">
+
+    <div class="card-body">
+        <a class="card-title" asp-controller="Direction" asp-action="SeatList" asp-route-id="@Model.DirectionId" style="text-decoration:none; font-size:24px;">@Model.StartCity <i class="fas fa-long-arrow-alt-right"></i> @Model.FinishCity</a>
+        <p class="card-text"><b style="font-size:19px;">Güzergah:</b>  @Model.StartCity> @Model.FinishCity</p><br />
+
+        <p style=" font-size:24px; text-align:center;">
+            <b>@Model.Date.ToShortDateString() - @Model.Date.Date.ToShortTimeString() </b>
+           
+        </p>
+       
+
+    </div>
+    <div class="card-footer text-center">
+        <a asp-controller="Direction" asp-action="SeatList" asp-route-id="@Model.DirectionId" class="btn btn-primary btn-sm">Control</a>
+
+    </div>
+</div>   

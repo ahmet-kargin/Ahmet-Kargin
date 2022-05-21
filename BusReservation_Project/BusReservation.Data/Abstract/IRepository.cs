@@ -10,7 +10,7 @@ namespace BusReservation.Data.Abstract
     {
         T GetById(int id);
         List<T> GetAll();
-        void Create(T entity);
+        int Create(T entity);
         void Update(T entity);
         void Delete(T entity);
     }

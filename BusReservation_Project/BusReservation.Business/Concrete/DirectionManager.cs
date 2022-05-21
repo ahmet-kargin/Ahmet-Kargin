@@ -16,9 +16,9 @@ namespace BusReservation.Business.Concrete
         {
             _directionRepository = directionRepository;
         }
-        public void Create(Direction entity)
+        public int Create(Direction entity)
         {
-            _directionRepository.Create(entity);
+            return  _directionRepository.Create(entity);
         }
 
         public void Delete(Direction entity)
@@ -57,9 +57,9 @@ namespace BusReservation.Business.Concrete
             return _directionRepository.GetDirectionDetails(id);
         }
 
-        public List<Direction> GetTrip(string departure, string arrival)
+        public List<Direction> GetTrip(string departure, string arrival,DateTime date)
         {
-            return _directionRepository.GetTrip(departure, arrival);
+            return _directionRepository.GetTrip(departure, arrival,date);
         }
 
         public void Update(Direction entity)

@@ -35,13 +35,13 @@
 <div class="card mb-3 shadow">
 
     <div class="card-title pl-3 pt-3">
-        <h1>@TempData["departureCity"] - @TempData["arrivalCity"]</h1>
+        @*<h1>@TempData["departureCity"] - @TempData["arrivalCity"]</h1>*@
     </div>
     <div class="card-body">
         <form action="/trip/details" method="POST" style="display:inline;">
             <div class="row no-gutters">
                 <div class="col-md-8">
-                    <h4>@Model.TicketDepartureCity > @Model.TicketArrivalCity Bus</h4>
+                    @*<h4>@Model.TicketDepartureCity > @Model.TicketArrivalCity Bus</h4>
                     <p><b>Direction: </b> @Model.TicketDepartureCity > @Model.TicketArrivalCity</p>
                     <p>@Model.Direction.Date  -  @Model.Direction.Time</p>
                     <br />
@@ -61,7 +61,7 @@
                     
                     
                     <input type="hidden" name="departureCity" value="@TempData["departureCity"].ToString()" />
-                    <input type="hidden" name="arrivalCity" value="@TempData["nereye"].ToString()" />
+                    <input type="hidden" name="arrivalCity" value="@TempData["nereye"].ToString()" />*@
 
 
 
@@ -81,7 +81,7 @@
                             <input type="text" name="surname" class="form-control" id="" aria-describedby="" placeholder="Soyisim" required="required" style="width: 1000px;margin-left: 30px;">
                         </div>
                         <div class="form-group">
-                            <select name="seatNo" class="form-select form-select-lg mb-3" asp-items="@ViewBag.Koltuklar" required="required" style="width: 1000px; height:30px; margin-left: 30px;" required="required">
+                            @*<select name="seatNo" class="form-select form-select-lg mb-3" asp-items="@ViewBag.Koltuklar" required="required" style="width: 1000px; height:30px; margin-left: 30px;" required="required">*@
                                 <option selected disabled>Select a Seat</option>
                             </select>
                         </div>

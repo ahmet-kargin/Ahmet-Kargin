@@ -21,11 +21,11 @@ namespace BusReservation.Data.Concrete
                 }
 
 
-                if (context.Tickets.Count() == 0)
-                {
-                    context.Tickets.AddRange(Tickets);
+                //if (context.Tickets.Count() == 0)S
+                //{
+                //    context.Tickets.AddRange(Tickets);
 
-                }
+                //}
                 if (context.Cities.Count() == 0)
                 {
                     context.Cities.AddRange(Cities);
@@ -38,22 +38,22 @@ namespace BusReservation.Data.Concrete
 
         private static Direction[] Directions =
         {
-            new Direction(){ DirectionId=1, Start="İstanbul", Finish="Malatya", Date="10.05.2022", Time="18.00",Price=500},
-            new Direction(){ DirectionId=2, Start="Malatya", Finish="İstanbul", Date="11.05.2022", Time="19.00",Price=600},
-            new Direction(){ DirectionId=3, Start="Ankara", Finish="Malatya", Date="12.05.2022", Time="20.00",Price=700},
+            new Direction(){ DirectionId=1, StartCity="İstanbul", FinishCity="Malatya", Date=DateTime.Now.Date,Price=500},
+            new Direction(){ DirectionId=2, StartCity="Malatya", FinishCity="İstanbul", Date=DateTime.Now.Date,Price=600},
+            new Direction(){ DirectionId=3, StartCity="Ankara", FinishCity="Malatya", Date=DateTime.Now.Date,Price=700},
             };
 
         private static Ticket[] Tickets =
         {
-            new Ticket(){TicketId=1, PassengerName="Ahmet", PassengerSurname="Metin,", PassengerMail="ahmetmetin@gmail.com",PassengerTel="05533656555", TicketDepartureCity="İstanbul", TicketArrivalCity="Malatya", SeatNo=1, Price=500, DirectionId=1},
-            new Ticket(){TicketId=2, PassengerName="Furkan", PassengerSurname="Kaya", PassengerMail="furkan@gmail.com",PassengerTel="05533656555", TicketDepartureCity="İstanbul", TicketArrivalCity="Ankara", SeatNo=2, Price=600, DirectionId=2},
-            new Ticket(){TicketId=3, PassengerName="Lale", PassengerSurname="Kar", PassengerMail="lale@gmail.com",PassengerTel="05533656555",TicketDepartureCity="Malatya", TicketArrivalCity="İstanbul", SeatNo=3, Price=500, DirectionId=1},
-            new Ticket(){TicketId=4, PassengerName="Osman", PassengerSurname="Lale", PassengerMail="osman@gmail.com",PassengerTel="05533656555", TicketDepartureCity="İstanbul", TicketArrivalCity="Trabzon", SeatNo=4, Price=700, DirectionId=3},
-            new Ticket(){TicketId=5, PassengerName="Şerif", PassengerSurname="Boz", PassengerMail="şerif@gmail.com",PassengerTel="05533656555",TicketDepartureCity="Trabzon", TicketArrivalCity="İstanbul", SeatNo=5, Price=700, DirectionId=3},
-            new Ticket(){TicketId=6, PassengerName="Meltem", PassengerSurname="Derin", PassengerMail="derin@gmail.com",PassengerTel="05533656555", TicketDepartureCity="İstanbul", TicketArrivalCity="Malatya", SeatNo=6, Price=500, DirectionId=1},
-            new Ticket(){TicketId=7, PassengerName="Ali", PassengerSurname="Metin", PassengerMail="metin@gmail.com",PassengerTel="05533656555", TicketDepartureCity="İstanbul", TicketArrivalCity="Malatya", SeatNo=7, Price=500, DirectionId=1},
-            new Ticket(){TicketId=8, PassengerName="Şule", PassengerSurname="Beyaz", PassengerMail="beyaz@gmail.com",PassengerTel="05533656555", TicketDepartureCity="İstanbul", TicketArrivalCity="Trabzon", SeatNo=8, Price=700, DirectionId=3},
-            new Ticket(){TicketId=9, PassengerName="Beyazit", PassengerSurname="Lale", PassengerMail="beyazit@gmail.com",PassengerTel="05533656555", TicketDepartureCity="İstanbul", TicketArrivalCity="Ankara", SeatNo=9, Price=600, DirectionId=2}
+            new Ticket(){TicketId=1, PassengerName="Ahmet", PassengerSurname="Metin,", PassengerMail="ahmetmetin@gmail.com",PassengerTel="05533656555", SeatNo=1, Price=500, DirectionId=1},
+            new Ticket(){TicketId=2, PassengerName="Furkan", PassengerSurname="Kaya", PassengerMail="furkan@gmail.com",PassengerTel="05533656555", SeatNo=2, Price=600, DirectionId=2},
+            new Ticket(){TicketId=3, PassengerName="Lale", PassengerSurname="Kar", PassengerMail="lale@gmail.com",PassengerTel="05533656555", SeatNo=3, Price=500, DirectionId=1},
+            new Ticket(){TicketId=4, PassengerName="Osman", PassengerSurname="Lale", PassengerMail="osman@gmail.com",PassengerTel="05533656555",  SeatNo=4, Price=700, DirectionId=3},
+            new Ticket(){TicketId=5, PassengerName="Şerif", PassengerSurname="Boz", PassengerMail="şerif@gmail.com",PassengerTel="05533656555", SeatNo=5, Price=700, DirectionId=3},
+            new Ticket(){TicketId=6, PassengerName="Meltem", PassengerSurname="Derin", PassengerMail="derin@gmail.com",PassengerTel="05533656555", SeatNo=6, Price=500, DirectionId=1},
+            new Ticket(){TicketId=7, PassengerName="Ali", PassengerSurname="Metin", PassengerMail="metin@gmail.com",PassengerTel="05533656555",  SeatNo=7, Price=500, DirectionId=1},
+            new Ticket(){TicketId=8, PassengerName="Şule", PassengerSurname="Beyaz", PassengerMail="beyaz@gmail.com",PassengerTel="05533656555",  SeatNo=8, Price=700, DirectionId=3},
+            new Ticket(){TicketId=9, PassengerName="Beyazit", PassengerSurname="Lale", PassengerMail="beyazit@gmail.com",PassengerTel="05533656555", SeatNo=9, Price=600, DirectionId=2}
 
         };
         private static City[] Cities =

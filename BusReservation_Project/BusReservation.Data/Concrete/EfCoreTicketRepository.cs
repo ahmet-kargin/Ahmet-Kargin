@@ -34,11 +34,6 @@ namespace BusReservation.Data.Concrete
             }
         }
 
-        public string GetTime()
-        {
-            throw new NotImplementedException();
-        }
-
         public Ticket GetLastSave()
         {
             using (var context = new TicketContext())
@@ -62,7 +57,7 @@ namespace BusReservation.Data.Concrete
             }
         }
 
-        public string GetDate(int id)
+        public DateTime GetDate(int id)
         {
             using (var context = new TicketContext())
             {
@@ -77,15 +72,7 @@ namespace BusReservation.Data.Concrete
 
         public string GetTime(int id)
         {
-            using (var context = new TicketContext())
-            {
-                var lastTicketTime = context.Directions
-                    .Where(i => i.DirectionId == id)
-                    .Select(i => i.Time)
-                    .FirstOrDefault();
-
-                return lastTicketTime;
-            }
+            throw new NotImplementedException();
         }
     }
 }

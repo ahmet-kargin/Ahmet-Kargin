@@ -33,6 +33,8 @@ namespace BusReservation.WebUI
             services.AddScoped<IDirectionRepository, EfCoreDirectionRepository>();
             services.AddScoped<IDirectionService, DirectionManager>();
             services.AddScoped<ICityRepository, EfCoreCityRepository>();
+            services.AddScoped<IChooseSeatRepository, EfCoreChooseSeatRepository>();
+            services.AddScoped<IChooseSeatService, ChooseSeatManager>();
             services.AddScoped<ICityService, CityManager>();
             services.AddControllersWithViews();
         }
