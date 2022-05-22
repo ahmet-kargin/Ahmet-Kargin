@@ -14,6 +14,6 @@ namespace BusReservation.WebUI.Models
         public BusReservation.Entity.Direction NewDirection { get; set; }
         public string Date { get; set; }
         public string Time { get; set; }
-        public Ticket Ticket { get; set; }
+        public BusReservation.Entity.Ticket Ticket { get; set; }
     }
 }

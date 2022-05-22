@@ -43,7 +43,7 @@
             <div class="form-group row mb-2">
                 <label class="col-form-label col-sm-3">Total Seat:</label>
                 <div class="col-sm-7">
-                    <input type="number" asp-for="SeatTotalNumber" class="form-control" />
+                    <input type="number" asp-for="SeatTotalNumber" class="form-control" max="40" min="20" />
                     <span asp-validation-for="SeatTotalNumber" class="text-danger"></span>
                 </div>
             </div>

@@ -87,15 +87,18 @@ namespace BusReservation.WebUI.Controllers
             SeatListViewModel model = new SeatListViewModel();
             try
             {
-                 
-                model.DirectionId = _directionService.GetById(id).DirectionId;
-
-                var seats = _chooseSeatService.GetChooseSeatsByDirectionId(model.DirectionId);
-                model.SeatList=
+                var direction = _directionService.GetById(id);
+                model.DirectionId = direction.DirectionId;
+                model.StartCity = direction.StartCity;
+                model.FinishCity = direction.FinishCity;
+                model.Date = direction.Date;
+                model.Price = direction.Price;
+                model.SeatList = _chooseSeatService.GetChooseSeatsByDirectionId(model.DirectionId);
                 return View(model);
             }
-            catch 
+            catch (Exception ex)
             {
+                var exx = ex;
                 ViewBag.Error = "Hata Oluştu.";
                 return View(model);
             }

@@ -16,7 +16,7 @@ namespace BusReservation.Data.Concrete
             using (var context = new TicketContext())
             {
                 var seats = context.ChooseSeats
-                    .FromSqlRaw($"select * from ChooseSeat where ((DirectionId='{directionId}'))")
+                    .FromSqlRaw($"select * from ChooseSeats where ((DirectionId='{directionId}'))")
                     .ToList();
 
                 return seats;

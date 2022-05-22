@@ -63,10 +63,10 @@ namespace BusReservation.Data.Concrete
                 //    .Where(i => i.CityId == Convert.ToInt32(arrival))
                 //    .Select(i => i.CityName)
                 //    .ToList();
-                var startDate = date.AddSeconds(-10);
-                var endDate = date.AddDays(1).AddSeconds(-10);
+                var startDate = date.AddDays(-1);
+                var endDate = date.AddDays(1);
                 var directions = context.Directions
-                    .FromSqlRaw($"select * from Directions where ((StartCity='{departure}') and (FinishCity='{arrival}' ) and (Date >= '{startDate}' and Date < '{endDate}')) ")
+                    .FromSqlRaw($"select * from Directions where ((StartCity='{departure}') and (FinishCity='{arrival}' ) and (Date >= '{startDate}' or Date <= '{endDate}')) ")
                     .ToList(); 
 
                  return directions;

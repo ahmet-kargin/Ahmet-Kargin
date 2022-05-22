@@ -1,0 +1,63 @@
+﻿@model BusReservation.WebUI.Models.Ticket.AddViewModel
+<h5 class="display-4">Create Ticket</h5>
+<hr />
+<form asp-controller="Ticket" asp-action="Add" method="post" enctype="multipart/form-data">
+    <div class="row">
+        <input type="hidden" id="ChooseSeatId" name="ChooseSeatId" value="@Model.ChooseSeatId">
+        <input type="hidden" id="DirectionId" name="DirectionId" value="@Model.DirectionId">
+        <input type="hidden" id="SeatName" name="SeatName" value="@Model.SeatName">
+        <input type="hidden" id="Price" name="Price" value="@Model.Price">
+        <div class="card-body">
+            <p class="card-text"><b style="font-size:19px;">Route:</b>  @Model.StartCity> @Model.FinishCity Price: (@Model.Price)TL</p><br />
+
+            <p style=" font-size:24px; text-align:center;">
+                <b>@Model.Date.ToShortDateString() - @Model.Date.Date.ToShortTimeString() </b>
+            </p>
+            <p style=" font-size:24px; text-align:center;">
+                <b>Seat No: @Model.SeatName</b>
+            </p>
+
+        </div>
+        <div class="col-md-8">
+
+
+            <div class="form-group row mb-2">
+                <label class="col-form-label col-sm-3">Name:</label>
+                <div class="col-sm-9">
+                    <input type="text" asp-for="PassengerName" class="form-control" />
+                    <span asp-validation-for="PassengerName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-2">
+                <label class="col-form-label col-sm-3">Surname:</label>
+                <div class="col-sm-9">
+                    <input type="text" asp-for="PassengerSurname" class="form-control" />
+                    <span asp-validation-for="PassengerSurname" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-2">
+                <label class="col-form-label col-sm-3">Mail:</label>
+                <div class="col-sm-9">
+                    <input type="text" asp-for="Mail" class="form-control" />
+                    <span asp-validation-for="Mail" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-2">
+                <label class="col-form-label col-sm-3">Phone Number:</label>
+                <div class="col-sm-9">
+                    <input type="text" asp-for="Tel" class="form-control" />
+                    <span asp-validation-for="Tel" class="text-danger"></span>
+                </div>
+            </div>
+
+
+            <div class="form-group row mb-2">
+                <div class="col-sm-9">
+                    <button type="submit" class="btn btn-primary">Save Ticket</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</form>

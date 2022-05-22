@@ -47,7 +47,11 @@ namespace BusReservation.Data.Concrete
 
         public void Update(TEntity entity)
         {
-            throw new NotImplementedException();
+            using (var context = new TContext())
+            {
+                context.Set<TEntity>().Update(entity);
+                context.SaveChanges();
+            }
         }
     }
 }
