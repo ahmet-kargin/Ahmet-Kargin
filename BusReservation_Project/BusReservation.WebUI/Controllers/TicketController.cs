@@ -1,5 +1,6 @@
 ﻿using BusReservation.Business.Abstract;
 using BusReservation.Entity;
+using BusReservation.WebUI.Models;
 using BusReservation.WebUI.Models.Ticket;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -62,6 +63,21 @@ namespace BusReservation.WebUI.Controllers
                 return View(model);
             }
             return RedirectToAction("Index", "Home");
+        }
+        public IActionResult TicketDetails()
+        {
+            Ticket lastTicket = _ticketService.GetLastSave();
+            int routeId = _ticketService.GetId();
+            string Time = _ticketService.GetTime(routeId);
+            string Date = _ticketService.GetDate(routeId);
+
+            var routeTicket = new TicketDirection()
+            {
+                Date = Date,
+                Time = Time,
+                Ticket = lastTicket
+            };
+            return View(routeTicket);
         }
     }
 }
