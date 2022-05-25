@@ -11,8 +11,8 @@
                     <th style="width:20px;">TicketID</th>
                     <th style="width:145px;">FullName</th>
                     <th style="">Mail</th>
-                    <th style="width:25px;">Departure City</th>
-                    <th style="width:25px;">Arrival City</th>
+                    <th style="width:25px;">Tel</th>
+                    <th style="width:25px;">City</th>
                     <th style="width:70px;">Seat No</th>
                     <th style="width:80px;">Price</th>
                     <th style="width:85px;">Direction No</th>
@@ -25,17 +25,17 @@
                     @foreach (var item in Model.Tickets)
                     {
                         <tr>
-                            @*<td>@item.TicketId</td>
+                            <td>@item.TicketId</td>
                             <td>@item.PassengerName @item.PassengerSurname</td>
                             <td>@item.PassengerMail</td>
-                            <td>@item.TicketDepartureCity</td>
-                            <td>@item.TicketArrivalCity</td>
+                            <td>@item.PassengerTel</td>
+                            <td>@Model.Cities</td>
                             <td>@item.SeatNo</td>
                             <td>@item.Price ₺</td>
-                            <td>@item.DirectionId</td>*@
+                            <td>@item.DirectionId</td>
                             <td>
                                 <form action="/User/cancellation" method="POST" style="display:inline;">
-                                   @* <input type="hidden" name="biletId" value="@item.TicketId" />*@
+                                    <input type="hidden" name="ticketId" value="@item.TicketId" />
                                     <button type="submit" class="btn btn-danger btn-md mr-2" style="color: white;">Cancel the Ticket</button>
                                 </form>
                             </td>
