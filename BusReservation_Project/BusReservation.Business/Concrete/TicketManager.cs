@@ -33,12 +33,12 @@ namespace BusReservation.Business.Concrete
 
         public Ticket GetById(int id)
         {
-            throw new NotImplementedException();
+            return _ticketRepository.GetById(id);
         }
 
         public int GetCountBySeat(int directionId)
         {
-            throw new NotImplementedException();
+            return _ticketRepository.GetCountBySeat(directionId);
         }
 
         public string GetDate(int id)
@@ -48,12 +48,13 @@ namespace BusReservation.Business.Concrete
 
         public int GetId()
         {
-            throw new NotImplementedException();
+            return _ticketRepository.GetId();
+
         }
 
         public Ticket GetLastSave()
         {
-            throw new NotImplementedException();
+            return _ticketRepository.GetLastSave();
         }
 
         public List<int> GetSeat(int DirectionId)
@@ -63,7 +64,7 @@ namespace BusReservation.Business.Concrete
 
         public string GetTime(int id)
         {
-            throw new NotImplementedException();
+            return _ticketRepository.GetTime(id);
         }
 
         public void Update(Ticket entity)

@@ -1,88 +1,90 @@
 ﻿@model BusReservation.WebUI.Models.Ticket.AddViewModel
 <div class="text-center" style="margin: 5rem;">
     <br />
-    <i class="fas fa-check-circle" style="font-size:36px; color:green;"></i><br />
-    <br /><p> Mr./Mrs. @Model.PassengerName @Model.PassengerSurname , your ticket request from @Model.StartCity  to @Model.FinishCity  has been successfully defined.</p> <br />
-    <br /><hr /><br />
-    <h3>Bilet Bilgileriniz</h3><br />
+    <form asp-controller="Ticket" asp-action="TicketDetails" method="post" enctype="multipart/form-data">
+        <i class="fas fa-check-circle" style="font-size:36px; color:green;"></i><br />
+        <br /><p> Mr./Mrs. @Model.PassengerName @Model.PassengerSurname , your ticket request from @Model.StartCity  to @Model.FinishCity  has been successfully defined.</p> <br />
+        <br /><hr /><br />
+        <h3>Bilet Bilgileriniz</h3><br />
 
-    <div class="ticket container">
-        <div class="left mt-2 row">
-            <div class="image col-md-6">
-                <div class="ticket-number">
-                    <p>
+        <div class="ticket container">
+            <div class="left mt-2 row">
+                <div class="image col-md-6">
+                    <div class="ticket-number">
+                        <p>
+                            #20030220
+                        </p>
+                    </div>
+                </div>
+                <div class="ticket-info col-md-6">
+                    <p class="date">
+                        <span>TUESDAY</span>
+                        <span class="june-29">JUNE 29TH</span>
+                        <span>2021</span>
+                    </p>
+                    <div class="show-name">
+                        <h1>SOUR Prom</h1>
+                        <h2>Olivia Rodrigo</h2>
+                    </div>
+                    <div class="time">
+                        <p>8:00 PM <span>TO</span> 11:00 PM</p>
+                        <p>DOORS <span>*</span> 7:00 PM</p>
+                    </div>
+                    <p class="location">
+                        <span>East High School</span>
+                        <span class="separator"><i class="far fa-smile"></i></span><span>Salt Lake City, Utah</span>
+                    </p>
+                </div>
+            </div>
+            <div class="right mt-4 row">
+                <div class="right-info-container col-md-12">
+                    <div class="time">
+                        <p>8:00 PM <span>TO</span> 11:00 PM</p>
+                        <p>DOORS <span>*</span> 7:00 PM</p>
+                    </div>
+                    <div class="barcode">
+                        <img src="https://external-preview.redd.it/cg8k976AV52mDvDb5jDVJABPrSZ3tpi1aXhPjgcDTbw.png?auto=webp&s=1c205ba303c1fa0370b813ea83b9e1bddb7215eb" alt="QR code">
+                    </div>
+                    <p class="ticket-number">
                         #20030220
                     </p>
                 </div>
             </div>
-            <div class="ticket-info col-md-6">
-                <p class="date">
-                    <span>TUESDAY</span>
-                    <span class="june-29">JUNE 29TH</span>
-                    <span>2021</span>
-                </p>
-                <div class="show-name">
-                    <h1>SOUR Prom</h1>
-                    <h2>Olivia Rodrigo</h2>
-                </div>
-                <div class="time">
-                    <p>8:00 PM <span>TO</span> 11:00 PM</p>
-                    <p>DOORS <span>*</span> 7:00 PM</p>
-                </div>
-                <p class="location">
-                    <span>East High School</span>
-                    <span class="separator"><i class="far fa-smile"></i></span><span>Salt Lake City, Utah</span>
-                </p>
-            </div>
-        </div>
-        <div class="right mt-4 row">
-            <div class="right-info-container col-md-12">
-                <div class="time">
-                    <p>8:00 PM <span>TO</span> 11:00 PM</p>
-                    <p>DOORS <span>*</span> 7:00 PM</p>
-                </div>
-                <div class="barcode">
-                    <img src="https://external-preview.redd.it/cg8k976AV52mDvDb5jDVJABPrSZ3tpi1aXhPjgcDTbw.png?auto=webp&s=1c205ba303c1fa0370b813ea83b9e1bddb7215eb" alt="QR code">
-                </div>
-                <p class="ticket-number">
-                    #20030220
-                </p>
-            </div>
+
         </div>
 
-    </div>
 
+        <table class="table table table-bordered shadow-sm">
+            <thead>
+                <tr>
+                    <th style="width:200px;">Name</th>
+                    <th style="">Phone Number</th>
+                    <th style="width:105px;">Travel From</th>
+                    <th style="width:105px;">Travel To</th>
+                    <th style="width:60px;">Seat Number</th>
+                    <th style="width:80px;">Price</th>
+                    <th style="width:200px;">Date - Time</th>
 
-    <table class="table table table-bordered shadow-sm">
-        <thead>
-            <tr>
-                <th style="width:200px;">Name</th>
-                <th style="">Phone Number</th>
-                <th style="width:105px;">Travel From</th>
-                <th style="width:105px;">Travel To</th>
-                <th style="width:60px;">Seat Number</th>
-                <th style="width:80px;">Price</th>
-                <th style="width:200px;">Date - Time</th>
+                    <th style="width:75px;">Sefer No</th>
 
-                <th style="width:75px;">Sefer No</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.PassengerName  @Model.PassengerSurname</td>
 
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>@Model.PassengerName  @Model.PassengerSurname</td>
+                    <td>@Model.Tel</td>
+                    <td>@Model.StartCity</td>
+                    <td>@Model.FinishCity</td>
+                    <td>@Model.SeatName</td>
+                    <td>@Model.Price ₺</td>
+                    <td>@Model.Date</td>
 
-                <td>@Model.Tel</td>
-                <td>@Model.StartCity</td>
-                <td>@Model.FinishCity</td>
-                <td>@Model.SeatName</td>
-                <td>@Model.Price ₺</td>
-                <td>@Model.Date</td>
+                    <td>@Model.DirectionId</td>
 
-                <td>@Model.DirectionId</td>
-
-            </tr>
-        </tbody>
-    </table>
+                </tr>
+            </tbody>
+        </table>
+    </form>
     <br />
 </div>

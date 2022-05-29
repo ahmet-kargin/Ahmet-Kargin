@@ -1,0 +1,25 @@
+﻿@model List<KUSYS_Project.Entity.Course>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h5 class="display-5 bg-warning w-100 p-3 text-white">COURCES</h5>
+<hr>
+<hr>
+<table class="table table-sm table-dark w-100 mt-2">
+    <thead class="bg-primary">
+        <tr>
+            <th>Id</th>
+            <th>Course Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model)
+        {
+            <tr>
+                <td>@course.CourseId</td>
+                <td>@course.CourseName</td>
+            </tr>
+        }
+    </tbody>
+</table>

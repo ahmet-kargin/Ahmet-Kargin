@@ -1,0 +1,43 @@
+﻿@model KUSYS_Project.Entity.Student
+@{
+    ViewData["Title"] = "Delete";
+}
+<h5 class="display-5 bg-warning w-100 p-3 text-white">Book Details</h5>
+<hr>
+<div class="row">
+    <div class="col-sm-3">
+        Student Id:
+    </div>
+    <div class="col-sm-5">
+        @Model.StudentId
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-3">
+         Name:
+    </div>
+    <div class="col-sm-5">
+        @Model.FirstName
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-3">
+        Surname:
+    </div>
+    <div class="col-sm-5">
+        @Model.LastName
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-3">
+        Birthday:
+    </div>
+    <div class="col-sm-5">
+        @Model.Birth
+    </div>
+</div>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="StudentId">
+    <input type="submit" value="Delete" class="btn btn-danger">
+</form>
+<a class="btn btn-primary mt-2" asp-action="Index">Return the Student List</a>

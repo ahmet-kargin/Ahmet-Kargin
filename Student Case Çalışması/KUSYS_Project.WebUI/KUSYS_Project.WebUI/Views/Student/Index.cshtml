@@ -1,0 +1,35 @@
+﻿@model List<KUSYS_Project.Entity.Student>
+@{
+    ViewData["Title"] = "Student List";
+}
+
+<h5 class="display-5 bg-warning w-100 p-3 text-white">STUDENTS</h5>
+<hr>
+<a class="btn btn-success btn-sm" asp-action="Create">Create a new Student</a>
+<hr>
+<table class="table table-sm table-dark w-100 mt-2 ">
+    <thead class="bg-primary p-3">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Transaction</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.StudentId</td>
+                <td>@student.FirstName</td>
+                <td>@student.LastName</td>
+                <td>@student.Birth</td>
+                <td>
+                    <a class="btn btn-sm btn-info" asp-action="Details" asp-route-id="@student.StudentId">Details</a>
+                    <a class="btn btn-sm btn-warning" asp-action="Edit" asp-route-id="@student.StudentId">Edit</a>
+                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@student.StudentId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
