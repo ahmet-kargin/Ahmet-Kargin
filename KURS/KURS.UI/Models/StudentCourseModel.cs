@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace KUSYS_Project.WebUI.Models
+namespace KURS.UI.Models
 {
     public class StudentCourseModel
     {

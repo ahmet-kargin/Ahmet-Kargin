@@ -1,4 +1,4 @@
-﻿using KUSYS_Project.Data.Abstract;
+﻿using KURS.DATA.Abstract;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KUSYS_Project.Data.Concrete.EFCore
+namespace KURS.DATA.Concrete.EFCore
 {
     public class EfCoreGenericRepository<TEntity, TContext> : IRepository<TEntity> where TEntity : class
         where TContext : DbContext, new()

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KUSYS_Project.Data.Abstract
+namespace KURS.DATA.Abstract
 {
     public interface IRepository<T>
     {

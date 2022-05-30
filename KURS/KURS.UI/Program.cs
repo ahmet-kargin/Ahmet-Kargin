@@ -1,10 +1,14 @@
-using KUSYS_Project.Business.Abstract;
-using KUSYS_Project.Business.Concrete;
+using KURS.BUSSINESS.Abstract;
+using KURS.BUSSINESS.Concrete;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorPages();
 // Add services to the container.
+
 builder.Services.AddScoped<ICourseService, CourseManager>();
 builder.Services.AddScoped<IStudentService, StudentManager>();
 builder.Services.AddControllersWithViews();

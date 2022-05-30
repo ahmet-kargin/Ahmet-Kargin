@@ -2,7 +2,7 @@
 using KUSYS_Project.Data.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
-namespace KUSYS_Project.WebUI.Controllers
+namespace KURS.UI.Controllers
 {
     public class CourseController : Controller
     {

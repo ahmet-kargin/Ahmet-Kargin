@@ -1,15 +1,14 @@
-﻿using KURS.DATA.Concrete;
+﻿using KURS.DATA.Abstract;
+using KURS.DATA.Concrete.EFCore;
 using KURS.ENTITY;
-using KUSYS_Project.Data.Abstract;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KUSYS_Project.Data.Concrete.EFCore
+namespace KURS.DATA.Concrete.EFCore
 {
     public class EfCoreCourseRepository : EfCoreGenericRepository<Course, CourseDbContext>, ICourseRepository
     {

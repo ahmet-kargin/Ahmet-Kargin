@@ -1,13 +1,13 @@
-﻿using KURS.ENTITY;
-using KUSYS_Project.Business.Abstract;
-using KUSYS_Project.Data.Abstract;
+﻿using KURS.BUSSINESS.Abstract;
+using KURS.DATA.Abstract;
+using KURS.ENTITY;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KUSYS_Project.Business.Concrete
+namespace KURS.BUSSINESS.Concrete
 {
     public class StudentManager : IStudentService
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KUSYS_Project.Business.Abstract
+namespace KURS.BUSSINESS.Abstract
 {
     public interface ICourseService
     {

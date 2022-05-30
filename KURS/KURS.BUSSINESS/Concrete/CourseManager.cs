@@ -1,20 +1,20 @@
-﻿using KURS.ENTITY;
-using KUSYS_Project.Business.Abstract;
-using KUSYS_Project.Data.Abstract;
+﻿using KURS.BUSSINESS.Abstract;
+using KURS.DATA.Abstract;
+using KURS.ENTITY;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KUSYS_Project.Business.Concrete
+namespace KURS.BUSSINESS.Concrete
 {
     public class CourseManager : ICourseService
     {
         private ICourseRepository _courseRepository;
         public CourseManager(ICourseRepository courseRepository)
         {
-            _courseRepository= courseRepository; 
+            _courseRepository = courseRepository;
         }
         public void Create(Course entity)
         {
@@ -33,7 +33,7 @@ namespace KUSYS_Project.Business.Concrete
 
         public Course GetById(int id)
         {
-            return  _courseRepository.GetById(id);
+            return _courseRepository.GetById(id);
         }
 
         public void Update(Course entity)
