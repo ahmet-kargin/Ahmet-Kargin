@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KUSYS_Project.Business", "K
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KUSYS_Project.WebUI", "KUSYS_Project.WebUI\KUSYS_Project.WebUI.csproj", "{82ACC552-1FDE-4761-95F2-5B84C6620810}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{97981C67-A749-42FF-A8D5-2A0A5BCF6AA2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{82ACC552-1FDE-4761-95F2-5B84C6620810}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82ACC552-1FDE-4761-95F2-5B84C6620810}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82ACC552-1FDE-4761-95F2-5B84C6620810}.Release|Any CPU.Build.0 = Release|Any CPU
-		{97981C67-A749-42FF-A8D5-2A0A5BCF6AA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{97981C67-A749-42FF-A8D5-2A0A5BCF6AA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{97981C67-A749-42FF-A8D5-2A0A5BCF6AA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{97981C67-A749-42FF-A8D5-2A0A5BCF6AA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

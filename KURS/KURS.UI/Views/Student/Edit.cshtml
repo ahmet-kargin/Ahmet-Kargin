@@ -1,0 +1,26 @@
+﻿@model KURS.ENTITY.Student
+@{
+    ViewData["Title"] = "Edit";
+}
+<h5 class="display-5 bg-warning w-100 p-3 text-white">Edit Student</h5>
+<hr>
+<form asp-action="Edit">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="mb-3">
+                <label asp-for="FirstName" class="control-label">@Model.StudentId)</label>
+                <input type="hidden" asp-for="StudentId">
+                <label for="">Name</label>
+                <input asp-for="FirstName" type="text" class="form-control">
+                <label for="">Surname</label>
+                <input asp-for="LastName" type="text" class="form-control">
+                <label for="">Birthday</label>
+                <input asp-for="BirthDay" type="text" class="form-control">
+                <label for="">Number of Page</label>
+                
+                <input type="submit" value="Save Changes" class="btn btn-success mt-2">
+        </div>
+        
+    </div>
+
+</form>

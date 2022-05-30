@@ -8,17 +8,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-var connectionString = builder.Configuration.GetConnectionString("CourseConnection");
-builder.Services.AddDbContext<CourseContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString(connectionString));
-
-});
-builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-builder.Services.AddSingleton<CourseContext>();
-
-
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -41,10 +30,4 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
-public class CourseContext : DbContext
-{
-    public CourseContext(DbContextOptions<CourseContext> options) : base(options) { }
-    public DbSet<Course> Courses => Set<Course>();
-    public DbSet<Student> Students => Set<Student>();
-    public DbSet<StudentCourse> StudentCourses => Set<StudentCourse>();
-}
+
