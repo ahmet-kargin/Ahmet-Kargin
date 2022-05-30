@@ -29,10 +29,10 @@ namespace KUSYS_Project.Data.Concrete
         }
         private static Course[] Courses =
         {
-            new Course() {CourseFakeId="CSI101",Name="Introduction to Computer Science"},
-            new Course() {CourseFakeId="CSI102",Name="Algorithms"},
-            new Course() {CourseFakeId="MAT101",Name="Calculus"},
-            new Course() {CourseFakeId="PHY101",Name="Physics"}
+            new Course() {CourseId=1,CourseFakeId="CSI101",Name="Introduction to Computer Science"},
+            new Course() {CourseId=2,CourseFakeId="CSI102",Name="Algorithms"},
+            new Course() {CourseId=3,CourseFakeId="MAT101",Name="Calculus"},
+            new Course() {CourseId=4,CourseFakeId="PHY101",Name="Physics"}
         };
     }
 }

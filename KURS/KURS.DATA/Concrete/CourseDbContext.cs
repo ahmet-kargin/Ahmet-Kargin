@@ -15,7 +15,7 @@ namespace KURS.DATA.Concrete
         public DbSet<StudentCourse> StudentCourses { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-OFVK2FD;Database=CourseDb;User=sa;Pwd=123");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-B4SKPB7;Database=CourseDb;User=sa;Pwd=123");
         }
     }
 }

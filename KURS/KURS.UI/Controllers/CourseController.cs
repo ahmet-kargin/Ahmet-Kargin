@@ -1,4 +1,5 @@
-﻿using KURS.DATA.Concrete;
+﻿using KURS.BUSSINESS.Concrete;
+using KURS.DATA.Concrete;
 using KUSYS_Project.Data.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,6 +15,13 @@ namespace KURS.UI.Controllers
         public IActionResult Index()
         {
             var courses = _context.Courses.ToList();
+            if (courses == null)
+            {
+                courses = new List<ENTITY.Course>();
+           
+
+            
+            }
             return View(courses);
         }
        
