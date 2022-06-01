@@ -66,7 +66,7 @@ namespace BusReservation.Data.Concrete
                 var startDate = date.AddDays(-1);
                 var endDate = date.AddDays(1);
                 var directions = context.Directions
-                    .FromSqlRaw($"select * from Directions where ((StartCity='{departure}') and (FinishCity='{arrival}' ) and (Date >= '{startDate}' or Date <= '{endDate}')) ")
+                    .FromSqlRaw($"select * from Directions where ((StartCity='{departure}') and (FinishCity='{arrival}' ) and (Date > '{startDate}' and Date < '{endDate}')) ")
                     .ToList(); 
 
                  return directions;

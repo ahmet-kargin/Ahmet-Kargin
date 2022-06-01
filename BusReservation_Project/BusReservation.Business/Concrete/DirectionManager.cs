@@ -57,9 +57,9 @@ namespace BusReservation.Business.Concrete
             return _directionRepository.GetDirectionDetails(id);
         }
 
-        public List<Direction> GetTrip(string departure, string arrival,DateTime date)
+        public List<Direction> GetTrip(string departure, string arrival, DateTime date)
         {
-            return _directionRepository.GetTrip(departure, arrival,date);
+            return _directionRepository.GetTrip(departure, arrival, date);
         }
 
         public void Update(Direction entity)

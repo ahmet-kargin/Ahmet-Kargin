@@ -10,7 +10,7 @@ namespace BusReservation.WebUI.Models
     {
         public List<BusReservation.Entity.Ticket> Tickets { get; set; }
         public List<BusReservation.Entity.Direction> Directions { get; set; }
-        public List<City> Cities { get; set; }
+        public List<BusReservation.Entity.City> Cities { get; set; }
         public BusReservation.Entity.Direction NewDirection { get; set; }
         public string Date { get; set; }
         public string Time { get; set; }
