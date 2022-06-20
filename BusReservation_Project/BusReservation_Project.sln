@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusReservation.WebUI", "Bus
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusReservation.Entity", "BusReservation.Entity\BusReservation.Entity.csproj", "{59F3A2A0-5FA1-407F-B26C-23B7CBE5E5D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusReservation.Data", "BusReservation.Data\BusReservation.Data.csproj", "{33BFE89A-238F-4E3A-B7B4-C93CD3A6A584}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusReservation.Data", "BusReservation.Data\BusReservation.Data.csproj", "{33BFE89A-238F-4E3A-B7B4-C93CD3A6A584}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusReservation.Business", "BusReservation.Business\BusReservation.Business.csproj", "{0E847FE9-28F9-40EF-85A9-D08F42D4986A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusReservation.Business", "BusReservation.Business\BusReservation.Business.csproj", "{0E847FE9-28F9-40EF-85A9-D08F42D4986A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusReservation.Core", "BusReservation.Core\BusReservation.Core.csproj", "{7BFF6D6F-8AAF-49D7-BC62-15A15373E2EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{0E847FE9-28F9-40EF-85A9-D08F42D4986A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E847FE9-28F9-40EF-85A9-D08F42D4986A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E847FE9-28F9-40EF-85A9-D08F42D4986A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BFF6D6F-8AAF-49D7-BC62-15A15373E2EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BFF6D6F-8AAF-49D7-BC62-15A15373E2EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BFF6D6F-8AAF-49D7-BC62-15A15373E2EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BFF6D6F-8AAF-49D7-BC62-15A15373E2EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

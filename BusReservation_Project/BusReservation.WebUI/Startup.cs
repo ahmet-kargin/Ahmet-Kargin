@@ -2,9 +2,14 @@ using BusReservation.Business.Abstract;
 using BusReservation.Business.Concrete;
 using BusReservation.Data.Abstract;
 using BusReservation.Data.Concrete;
+using BusReservation.WebUI.EmailServices;
+using BusReservation.WebUI.Identity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -27,8 +32,44 @@ namespace BusReservation.WebUI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<ITicketRepository, EfCoreTicketRepository>();
+            services.AddDbContext<ApplicationContext>(options=>options.UseSqlite("Data Source = TicketDb"));
+            services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<ApplicationContext>().AddDefaultTokenProviders();
+            services.Configure<IdentityOptions>(options => {
+                //Password Restrictions
+                options.Password.RequireDigit = true;
+                options.Password.RequireLowercase = true;
+                options.Password.RequireUppercase = true;
+                options.Password.RequireNonAlphanumeric = true;
+                options.Password.RequiredLength = 6;
 
+                //Lockout Restrictions
+                options.Lockout.MaxFailedAccessAttempts = 3;
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+
+                //User 
+                options.User.RequireUniqueEmail = true;
+
+                //SignIn
+                options.SignIn.RequireConfirmedEmail = true;
+
+            });
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/account/login";
+                options.LogoutPath = "/account/logout";
+                options.AccessDeniedPath = "/account/accessdenied";
+                options.SlidingExpiration = true;
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+                options.Cookie = new CookieBuilder()
+                {
+                    HttpOnly = true,
+                    Name = "BusReservation_Project.Security.Cookie",
+                    SameSite = SameSiteMode.Strict
+                };
+            });
+
+
+            services.AddScoped<ITicketRepository, EfCoreTicketRepository>();
             services.AddScoped<ITicketService, TicketManager>();
             services.AddScoped<IDirectionRepository, EfCoreDirectionRepository>();
             services.AddScoped<IDirectionService, DirectionManager>();
@@ -36,7 +77,22 @@ namespace BusReservation.WebUI
             services.AddScoped<IChooseSeatRepository, EfCoreChooseSeatRepository>();
             services.AddScoped<IChooseSeatService, ChooseSeatManager>();
             services.AddScoped<ICityService, CityManager>();
+
+
+            services.AddScoped<IEmailSender, SmtpEmailSender>(i => new SmtpEmailSender(
+               Configuration["EmailSender:Host"],
+               Configuration.GetValue<int>("EmailSender:Port"),
+               Configuration.GetValue<bool>("EmailSender:EnableSSL"),
+               Configuration["EmailSender:UserName"],
+               Configuration["EmailSender:Password"]
+               ));
+
+
             services.AddControllersWithViews();
+            services.AddRazorPages().AddViewOptions(options =>
+                options.HtmlHelperOptions.ClientValidationEnabled = false
+            );
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
