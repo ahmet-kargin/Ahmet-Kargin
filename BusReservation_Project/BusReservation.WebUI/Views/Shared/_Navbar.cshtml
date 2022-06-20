@@ -41,6 +41,18 @@
                             <li class="nav-item">
                                 <a href="/account/register" class="nav-link text-dark">Register</a>
                             </li>
+                            if (User.IsInRole("Admin"))
+                            {
+                                <li class="nav-item">
+                                    <a href="/admin/products" class="nav-link text-dark">Admin Products</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin/role/list" class="nav-link text-dark">Roles</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin/user/list" class="nav-link text-dark">Users</a>
+                                </li>
+                            }
                         }
                         else
                         {

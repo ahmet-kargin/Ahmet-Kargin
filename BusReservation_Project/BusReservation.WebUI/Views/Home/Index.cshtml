@@ -6,7 +6,7 @@
 <div class="container shadow" style="margin-bottom: 100px; padding: 10px 14px;">
     <div class="form-group" style="display: inline;">
         <form action="/home/index" class="form-inline">
-            <select name="departureCity" class="form-select form-select-lg mb-3" asp-items="@ViewBag.Cities" style="width: 505px; height:53px;">
+            <select name="departureCity" class="form-select form-select mb-3" asp-items="@ViewBag.Cities" style="width: 505px; height:45px;">
                 @if (Model.Directions != null)
                 {
                     <option selected>@ViewBag.DepartureCity</option>
@@ -18,7 +18,7 @@
 
             </select>
             <i class="fas fa-long-arrow-alt-right" style="padding: 0px 20px; font-size: 22px;"></i>
-            <select name="arrivalCity" class="form-select form-select-lg mb-3" asp-items="@ViewBag.Cities" style="width: 505px; height:53px;">
+            <select name="arrivalCity" class="form-select form-select mb-3" asp-items="@ViewBag.Cities" style="width: 505px; height:45px;">
                 @if (Model.Directions != null)
                 {
                     <option selected>@ViewBag.ArrivalCity</option>
@@ -29,28 +29,29 @@
                 }
 
             </select>
-            <input type="date" asp-for="Date" class="form-control" min="2022-05-20" />
-            <button type="submit" class="btn btn-success btn-lg btn-block mt-3">Find a Trip</button>
+            <input type="date" asp-for="Date" class="form-control" style="width: 505px; height:45px;" min="2022-05-20" />
+            <button type="submit" class="btn btn-success btn-group-sm btn-block mt-3">Find a Trip</button>
         </form>
     </div>
 
-    @if (Model.Directions != null)
+    @if (Model.Directions == null)
+    {
+        <div class="row">
+            @await Html.PartialAsync("_WithoutTrip")
+        </div>
+
+    }
+    else
     {
         <div class="row">
             @foreach (var item in @Model.Directions)
             {
 
                 <div class="col-md-6">
-                    @await Html.PartialAsync("_SummaryTrip", item)
+                    @await Html.PartialAsync("_SummaryTrip")
 
                 </div>
             }
-        </div>
-    }
-    else
-    {
-        <div class="row">
-            @await Html.PartialAsync("_WithoutTrip")
         </div>
     }
 

@@ -10,7 +10,7 @@
 
 <div class="container shadow" style="margin-bottom: 100px; padding: 10px 14px;">
     <div class="card-body">
-        <p class="card-text"><b style="font-size:19px;">Route:</b>  @Model.StartCity> @Model.FinishCity Price: (@Model.Price)</p><br />
+        <p class="card-text"><b style="font-size:19px;">Route:</b> From <span class="text-danger">@Model.StartCity</span> To <span class="text-danger">@Model.FinishCity</span> Price: (@Model.Price TL)</p><br />
 
         <p style=" font-size:24px; text-align:center;">
             <b>@Model.Date.ToShortDateString() - @Model.Date.Date.ToShortTimeString() </b>
@@ -44,7 +44,7 @@
                             }
                             else
                             {
-                                <div class="col-md-2" style="display: inline-block; background-color: red;color:white; height: 40px; width: 40px;border:solid black; margin: 10px;">
+                                <div class="col-md-2" style="display: inline-block; background-color: red ;color:white; height: 40px; width: 40px;border:solid black; margin: 10px;">
                                     @item.Name.ToString()
                                 </div>
                             }
