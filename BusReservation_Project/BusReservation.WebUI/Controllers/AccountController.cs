@@ -59,7 +59,7 @@ namespace BusReservation.WebUI.Controllers
                     userId=user.Id,
                     token=code
                 });
-                await _emailSender.SendEmailAsync(model.Email, "Confirm Account!", "$Please click < a href = 'https://localhost:5001{url}' > click to confirm your email address! </ a >");
+                await _emailSender.SendEmailAsync(model.Email, "Confirm Account!", $"Please click <a href = 'https://localhost:5001{url}' > click to confirm your email address! </ a >");
                 TempData["Message"] = JobManager.CreateMessage("", "Click on the confirmation link sent to your e-mail to complete your registration!", "warning");
                 return RedirectToAction("Login", "Account");
             }
