@@ -1,0 +1,54 @@
+﻿@model List<EntityLayer.Concrete.Product>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h6 class="display-4">Admin Products Managament</h6>
+        <hr />
+        <a href="/admin/ProductCreate" class="btn btn-sm btn-primary">Create Product</a>
+        <table class="table table-bordered mt-2">
+            <thead>
+                <tr>
+                    <th width="30">ID</th>
+                    <th width="100">Image</th>
+                    <th>Name</th>
+                    <th width="30">Company Name</th>
+                    <th width="30">Price</th>
+                    <th width="140">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Count > 0)
+                {
+                    @foreach (var product in Model)
+                    {
+                        <tr>
+                            <td>@product.ProductID</td>
+                            <td><img src="~/img/@product.ImageUrl" width="80" /></td>
+                            <td>@product.Name</td>
+                            <td>@product.Company.Name</td>
+                            <td>@product.Price</td>
+                            <td>
+                                <a href="/admin/EditProduct/@product.ProductID" class="btn btn-sm btn-primary mr-1">Edit</a>
+                                <form action="/Admin/ProductDelete" method="post" class="d-inline" >
+                                    <input type="hidden" name="productId" value="@product.ProductID" />
+                                    <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    //ÜRün olmadığında yapılacak işlem
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>

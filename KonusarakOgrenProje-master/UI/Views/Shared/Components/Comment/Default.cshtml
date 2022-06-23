@@ -1,0 +1,35 @@
+﻿@model List<EntityLayer.Concrete.Comment>
+<style>
+    .user_name{
+    font-size:14px;
+    font-weight: bold;
+}
+.comments-list .media{
+    border-bottom: 1px dotted #ccc;
+}
+</style>
+<div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                  <div class="page-header">
+                    <h1><small class="pull-right">@Model.Count</small> Yorumlar </h1>
+                  </div> 
+                   <div class="comments-list">
+                       @foreach (var item in Model)
+                {
+                     <div class="media">
+                            
+                            <div class="media-body">
+                                
+                              <h4 class="media-heading user_name">@item.CommentUserName</h4>
+                              @item.CommentTitle
+                              <p>@item.CommentContent</p>
+                              
+                              <p><small><a class="btn btn-success" href="">Like</a> - <a class="btn btn-danger" href="">Share</a></small></p>
+                            </div>
+                          </div>
+                      
+                }
+                </div>
+            </div>
+        </div>

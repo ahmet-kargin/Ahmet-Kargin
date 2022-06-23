@@ -1,0 +1,14 @@
+﻿@model EntityLayer.Concrete.User
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form action="Login/Index" class="form-control">
+    <label class="form-label">Username</label>
+    <input type="text" class="form-control" name="Username" />
+    <label class="form-label">Password</label>
+    <input type="text" class="form-control" name="Password" />
+    <input type="submit" class="btn btn-primary" value="Giriş Yap"/>
+</form>
+
