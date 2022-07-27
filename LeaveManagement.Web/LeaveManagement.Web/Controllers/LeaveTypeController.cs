@@ -1,23 +1,27 @@
-﻿using LeaveManagement.Web.Data;
+﻿using AutoMapper;
+using LeaveManagement.Web.Data;
+using LeaveManagement.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace LeaveManagement.Web.Controllers
 {
     public class LeaveTypeController : Controller
     {
         private readonly ApplicationDbContext _context;
-
-        public LeaveTypeController(ApplicationDbContext context)
+        private readonly IMapper _mapper;
+        public LeaveTypeController(ApplicationDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
 
         //GET: LeaveTypes
         public async Task<IActionResult> Index()
         {
-            var leaveTypes = await _context.LeaveTypes.ToListAsync();
+            var leaveTypes = _mapper.Map<List<LeaveTypeVM>>(await _context.LeaveTypes.ToListAsync());
             return View(leaveTypes); // Select * From LeaveTypes
         }
         //GET : LeaveTypes/Details/5
