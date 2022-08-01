@@ -38,6 +38,7 @@ namespace LeaveManagement.Web.Controllers
             }
             return View(leaveType);
         }
+       
         //GET : LeaveTypes/Create
         public IActionResult Create()
         {
@@ -118,7 +119,7 @@ namespace LeaveManagement.Web.Controllers
             }
             return View(leaveType);
         }
-        //POST : LeaveTypes/Create
+        //POST : LeaveTypes/Delete
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
