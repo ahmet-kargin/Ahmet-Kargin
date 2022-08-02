@@ -8,6 +8,10 @@
       "type": "mssql.local",
       "connectionId": "ConnectionStrings:DefaultConnection",
       "dynamicId": null
+    },
+    "mssql2": {
+      "type": "mssql.local",
+      "connectionId": "ConnectionStrings:LeaveManagementWebContextConnection"
     }
   }
 }
