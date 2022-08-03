@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace LeaveManagement.Web.Contracts
+﻿namespace LeaveManagement.Web.Contracts
 {
-    public interface IGenericRepository<T> where T : class 
+    public interface IGenericRepository<T> where T : class
     {
-        Task<T> Get(int? id);
-        Task<List<T>> GetAll();
-        Task<T> Add(T entity);
-
+        Task<T> GetAsync(int? id);
+        Task<List<T>> GetAllAsync();
+        Task<T> AddAsync(T entity);
         Task<bool> Exists(int id);
-        Task Delete(int id);
-        Task Update(T entity);
+        Task DeleteAsync(int id);
+        Task UpdateAsync(T entity);
+        
 
     }
 }

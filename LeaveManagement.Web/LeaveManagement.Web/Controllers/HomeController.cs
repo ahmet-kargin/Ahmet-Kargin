@@ -1,7 +1,6 @@
-﻿using LeaveManagement.Web.Data;
-using LeaveManagement.Web.Models;
+﻿using LeaveManagement.Web.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace LeaveManagement.Web.Controllers
@@ -14,10 +13,12 @@ namespace LeaveManagement.Web.Controllers
         {
             _logger = logger;
         }
+
         public IActionResult Index()
         {
             return View();
         }
+        [Authorize]
         public IActionResult Privacy()
         {
             return View();
